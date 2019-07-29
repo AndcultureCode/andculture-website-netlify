@@ -1,0 +1,43 @@
+.c-footer {
+  @include site-container;
+  padding-bottom: 48px;
+  padding-top: 60px;
+
+  p, a {
+    color: get-color-primary("after-hours");
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  a {
+    @include color-transition;
+
+    &:hover {
+      color: get-color-primary("fresh");
+    }
+  }
+
+  &__divider {
+    padding: 0 10px;
+  }
+
+  &__logo {
+    @include grid-column(3);
+
+    img {
+      height: 40px;
+      width: 144px;
+    }
+  }
+
+  &__info {
+    @include grid-column(6);
+    padding-top: 14px;
+  }
+
+  &__copyright {
+    @include grid-column(3);
+    padding-top: 14px;
+    text-align: right;
+  }
+}

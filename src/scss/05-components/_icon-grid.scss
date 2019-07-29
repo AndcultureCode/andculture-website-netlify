@@ -1,0 +1,109 @@
+.c-icon-grid {
+  text-align: right;
+
+  &__row {
+    margin-bottom: 63px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    > .c-icon {
+      margin-left: 64px;
+      @include animation(icon-spin-out 1s alternate ease-out forwards);
+
+      &:hover {
+        @include animation(icon-spin-in 0.4s alternate ease-out forwards);
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__selection {
+    display: inline-block;
+    margin-left: 64px;
+    position: relative;
+
+    &:hover {
+      .c-icon-grid__selection__label {
+        @include animation(icon-label-in 1s alternate ease-out forwards);
+      }
+
+      .c-icon {
+        @include animation(icon-selected-spin-in 0.4s alternate ease-out forwards);
+      }
+    }
+
+    &.work {
+      .c-icon {
+        color: get-color-secondary("violet-blue");
+        @include icon-shadow(rgba(60,98,187,0.4));
+      }
+    }
+
+    &.team {
+      .c-icon {
+        color: get-color-primary("fresh");
+        @include icon-shadow(rgba(44,165,125,0.4));
+      }
+    }
+
+    &.about {
+      .c-icon {
+        color: get-color-secondary("throwback-pink");
+        @include icon-shadow(rgba(255,171,255,0.4));
+      }
+    }
+
+    &.blog {
+      .c-icon {
+        color: get-color-secondary("siracha");
+        @include icon-shadow(rgba(245,92,89,0.4));
+      }
+    }
+
+    &__label {
+      display: block;
+      width: 82px;
+      bottom: -32px;
+      left: -84px;
+      position: absolute;
+      font-family: din-2014-narrow, sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-align: left;
+      text-transform: uppercase;
+      @include animation(icon-label-out 0.4s alternate ease-out forwards);
+
+      .work & {
+        color: get-color-secondary("violet-blue");
+      }
+
+      .team & {
+        color: get-color-primary("fresh");
+      }
+
+      .about & {
+        color: get-color-secondary("throwback-pink");
+      }
+
+      .blog & {
+        color: get-color-secondary("siracha");
+      }
+    }
+
+    .c-icon {
+      @include animation(icon-selected-spin-out 0.4s alternate ease-out forwards);
+    }
+  }
+
+  .c-icon {
+    position: relative;
+    font-size: 27px;
+    color: get-color-complimentary("icon");
+  }
+}

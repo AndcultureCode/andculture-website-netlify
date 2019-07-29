@@ -1,12 +1,12 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
+import React           from 'react'
+import { Helmet }      from 'react-helmet'
 import useSiteMetadata from './SiteMetadata'
+import Footer          from './organisms/Footer';
+import '../scss/app.scss'
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata()
+  const { title, description } = useSiteMetadata();
+
   return (
     <div>
       <Helmet>
@@ -37,18 +37,19 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
+        <link rel="stylesheet" href="https://use.typekit.net/wqk3bab.css"></link>
         <meta name="theme-color" content="#fff" />
-
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
-      <Navbar />
-      <div>{children}</div>
+      <main role="main">
+        { children }
+      </main>
       <Footer />
     </div>
   )
-}
+};
 
-export default TemplateWrapper
+export default TemplateWrapper;

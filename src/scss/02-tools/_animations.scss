@@ -1,0 +1,32 @@
+// Icon Selected Spin
+@include keyframes(icon-selected-spin-in) {
+  from  { transform: rotate(0deg) scale(1); }
+  to    { transform: rotate(-25deg) scale(2.5); }
+}
+
+@include keyframes(icon-selected-spin-out) {
+  from  { transform: rotate(-25deg) scale(2.5); }
+  to    { transform: rotate(0deg) scale(1); }
+}
+
+// Icon Spin
+@include keyframes(icon-spin-in) {
+  from  { transform: scale(1); }
+  to    { transform: scale(1.75); }
+}
+
+@include keyframes(icon-spin-out) {
+  from  { transform: scale(1.75); }
+  to    { transform: scale(1); }
+}
+
+// Icon Label Fade
+@include keyframes(icon-label-in) {
+  from  { opacity: 0; }
+  to    { opacity: 1; }
+}
+
+@include keyframes(icon-label-out) {
+  from  { opacity: 1; }
+  to    { opacity: 0; }
+}

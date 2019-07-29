@@ -1,0 +1,16 @@
+@mixin color-transition($color: true, $backgroundColor: false) {
+  $colorTransition:     color 0.5s ease;
+  $backColorTransition: background-color 0.5s ease;
+
+  @if $color && $backgroundColor {
+    transition: $colorTransition, $backColorTransition;
+  }
+
+  @if $color {
+    transition: $colorTransition;
+  }
+
+  @if $backgroundColor {
+    transition: $backColorTransition;
+  }
+}

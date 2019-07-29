@@ -1,0 +1,38 @@
+// Color Functions
+// ------------------------------------
+
+@function get-color($palette: "primary", $color: "fresh") {
+  @return map-get(map-get($colors, $palette), $color);
+}
+
+@function get-color-primary($color: "fresh") {
+  @return get-color("primary", $color);
+}
+
+@function get-color-secondary($color: "violet-blue") {
+  @return get-color("secondary", $color);
+}
+
+@function get-color-complimentary($color: "tea") {
+  @return get-color("complimentary", $color);
+}
+
+
+// Font Functions
+// ------------------------------------
+
+@function get-font-size($size: "base") {
+  @if not map-has-key($font-sizes, $size) {
+    @return $size;
+  }
+
+  @return map-get($font-sizes, $size);
+}
+
+
+// Icon Functions
+// ------------------------------------
+
+@function get-icon($icon) {
+  @return map-get($icons, $icon);
+}
