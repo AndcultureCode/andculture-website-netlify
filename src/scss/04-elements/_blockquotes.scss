@@ -1,0 +1,9 @@
+blockquote {
+  @include font-style(
+    $font-normal,                     // Font Family
+    40px,                             // Font Size
+    get-color-primary("after-dark"),  // Font Color
+    300,                              // Font Weight
+    50px                              // Line Height
+  );
+}

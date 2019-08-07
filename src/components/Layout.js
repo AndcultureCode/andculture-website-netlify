@@ -3,6 +3,8 @@ import { Helmet }      from 'react-helmet'
 import useSiteMetadata from './SiteMetadata'
 import Footer          from './organisms/Footer';
 import '../scss/app.scss'
+import Menu from './atoms/Menu';
+import Header from './organisms/Header';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
@@ -44,6 +46,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:url" content="/" />
         <meta property="og:image" content="/img/og-image.jpg" />
       </Helmet>
+      <Header />
       <main role="main">
         { children }
       </main>

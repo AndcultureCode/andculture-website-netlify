@@ -7,4 +7,24 @@ p {
   color: get-color-primary("after-hours");
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
+
+  &.intro {
+    @include font-style(
+      $font-normal,                     // Font Family
+      22px,                             // Font Size
+      get-color-primary("after-dark"),  // Font Color
+      300,                              // Font Weight
+      38px                              // Line Height
+    );
+  }
+
+  &.post {
+    @include font-style(
+      $font-normal,                     // Font Family
+      20px,                             // Font Size
+      get-color-primary("after-dark"),  // Font Color
+      false,                            // Font Weight
+      26px                              // Line Height
+    );
+  }
 }

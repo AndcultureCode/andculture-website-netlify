@@ -1,0 +1,33 @@
+.c-menu {
+  &__toggle {
+    @include font-style(
+      $font-narrow,                     // Font Family
+      16px,                             // Font Size
+      get-color-primary("after-hours"), // Font Color
+      700,                              // Font Weight
+      36px                              // Line Height
+    );
+    letter-spacing: 2px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &__overlay {
+    display: block;
+    height: 100%;
+    opacity: 0;
+    width: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    background-color: get-color-primary("after-hours");
+    @include animation(fade-out 0.4s alternate ease-out forwards);
+
+    &.active {
+      opacity: 1;
+      z-index: 1000;
+      @include animation(fade-in 0.4s alternate ease-out forwards);
+    }
+  }
+}

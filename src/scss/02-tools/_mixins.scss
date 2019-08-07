@@ -32,3 +32,16 @@
   width: 1180px;
   position: relative;
 }
+
+@mixin font-style($family: false, $size: false, $color: false, $weight: false, $line-height: false) {
+  @if $family {
+    font-family: $family;
+  } @else {
+    font-family: $font-normal;
+  }
+
+  @if $size         { font-size: $size;         }
+  @if $color        { color: $color;            }
+  @if $weight       { font-weight: $weight;     }
+  @if $line-height  { line-height: $line-height }
+}
