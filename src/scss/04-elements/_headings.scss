@@ -15,6 +15,15 @@ h1 {
     300,                              // Font Weight
     90px                              // Line Height
   );
+
+  @include respond-to("phone") {
+    font-size: 52px;
+    line-height: 62px;
+  }
+
+  > .fade {
+    opacity: 0.3;
+  }
 }
 
 h2 {
@@ -25,4 +34,9 @@ h2 {
     false,                            // Font Weight
     46px                              // Line Height
   );
+
+  @include respond-to("phone") {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }

@@ -13,9 +13,9 @@
   }
 
   &__overlay {
-    display: block;
     height: 100%;
     opacity: 0;
+    visibility: hidden;
     width: 100%;
     left: 0;
     position: fixed;
@@ -26,8 +26,132 @@
 
     &.active {
       opacity: 1;
-      z-index: 1000;
+      visibility: visible;
+      z-index: 98;
       @include animation(fade-in 0.4s alternate ease-out forwards);
+    }
+
+    &__container {
+      @include site-container;
+      padding-top: 105px;
+
+      &__main {
+        @include grid-column(5);
+        @include grid-push(1);
+        text-align: left;
+
+        ul {
+          @include clearlist;
+
+          li {
+            @include clearlist;
+
+            &:first-child a {
+              line-height: 76px;
+              padding-bottom: 35px;
+
+              &:after {
+                top: 80%;
+              }
+            }
+          }
+        }
+
+        a {
+          display: inline-block;
+          position: relative;
+
+          @include font-style(
+            $font-normal,                // Font Family
+            76px,                        // Font Size
+            get-color-primary("white"),  // Font Color
+            300,                         // Font Weight
+            136px                        // Line Height
+          );
+
+          text-decoration: none;
+
+          &:after {
+            height: 1px;
+            width: 100%;
+            left: 0;
+            position: absolute;
+            top: 90%;
+            background: get-color-primary("white");
+            content: '';
+            opacity: 0;
+            -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+            -moz-transition: height 0.3s, opacity 0.3s, -moz-transform 0.3s;
+            transition: height 0.3s, opacity 0.3s, transform 0.3s;
+            @include transform(translateY(-10px));
+          }
+
+          &:hover:after {
+            height: 5px;
+            opacity: 1;
+            @include transform(translateY(0px));
+          }
+        }
+      }
+
+      &__aside {
+        @include grid-column(6);
+        text-align: left;
+
+        &__nav {
+          ul {
+            @include clearlist;
+  
+            li {
+              @include clearlist;
+            }
+          }
+
+          a {
+            display: inline-block;
+
+            @include font-style(
+              $font-normal,                     // Font Family
+              20px,                             // Font Size
+              get-color-neutral("lighter"),     // Font Color
+              false,                            // Font Weight
+              42px                              // Line Height
+            );
+
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__locations {
+    @include clearfix();
+    padding-top: 182px;
+
+    &__column {
+      float: left;
+
+      &:last-child {
+        margin-left: 153px;
+      }
+
+      p {
+        color: get-color-neutral("lighter");
+        font-size: 16px;
+      }
+    }
+
+    &__header {
+      @include font-style(
+        $font-narrow,                   // Font Family
+        16px,                           // Font Size
+        get-color-neutral("lighter"),   // Font Color
+        700,                            // Font Weight
+        36px                            // Line Height
+      );
+
+      text-transform: uppercase;
     }
   }
 }

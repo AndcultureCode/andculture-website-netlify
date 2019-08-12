@@ -22,6 +22,12 @@
   }
 }
 
+@mixin transform($value) {
+  -webkit-transform: $value;
+  -moz-transform: $value;
+  transform: $value;
+}
+
 @mixin icon-shadow($color) {
   text-shadow: 0 4px 16px $color;
 }
@@ -29,7 +35,7 @@
 @mixin site-container() {
   @include grid-container;
   margin: 0 auto;
-  width: 1180px;
+  max-width: 1180px;
   position: relative;
 }
 
@@ -44,4 +50,73 @@
   @if $color        { color: $color;            }
   @if $weight       { font-weight: $weight;     }
   @if $line-height  { line-height: $line-height }
+}
+
+
+// Responsive Styles
+// --------------------------
+
+@mixin non-retina {
+  @media
+    not screen and (-webkit-min-device-pixel-ratio: 2),
+    not screen and (min--moz-device-pixel-ratio: 2),
+    not screen and (-o-min-device-pixel-ratio: 2/1),
+    not screen and (min-device-pixel-ratio: 2),
+    not screen and (min-resolution: 192dpi),
+    not screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin respond-to($media) {
+  @if map-has-key($breakpoints, $media) {
+    @media (max-width: map-get($breakpoints, $media)) { @content; }
+  }
+  @else if $media == non-retina {
+    @media screen and (-webkit-max-device-pixel-ratio: 1) { @content; }
+  }
+  @else if $media == retina {
+    @include retina();
+  }
+  @else {
+    @media only screen and (max-width: #{$media}px) { @content; }
+  }
+}
+
+@mixin retina {
+  @media
+    only screen and (-webkit-min-device-pixel-ratio: 2),
+    only screen and (min--moz-device-pixel-ratio: 2),
+    only screen and (-o-min-device-pixel-ratio: 2/1),
+    only screen and (min-device-pixel-ratio: 2),
+    only screen and (min-resolution: 192dpi),
+    only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+
+  &:after {
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+
+  & {
+    *zoom: 1;
+  }
+}
+
+@mixin clearlist {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }

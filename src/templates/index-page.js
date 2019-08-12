@@ -1,10 +1,9 @@
 import React       from 'react'
 import PropTypes   from 'prop-types'
 import { graphql } from 'gatsby'
-
-import IconGrid from '../components/molecules/IconGrid'
-import Layout   from '../components/Layout'
-import Learn from '../components/molecules/Learn';
+import Layout      from '../components/Layout'
+import Learn       from '../components/molecules/Learn';
+import HomeHeader  from '../components/organisms/HomeHeader';
 
 export const IndexPageTemplate = ({
   image,
@@ -16,7 +15,7 @@ export const IndexPageTemplate = ({
   intro,
 }) => (
   <div>
-      <IconGrid />
+      <HomeHeader />
       <Learn />
 
     {/* <div

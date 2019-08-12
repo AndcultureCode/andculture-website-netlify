@@ -1,0 +1,7 @@
+.c-mobile-break {
+  display: none;
+
+  @include respond-to("tablet") {
+    display: inline;
+  }
+}

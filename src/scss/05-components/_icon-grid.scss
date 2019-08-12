@@ -5,7 +5,8 @@
   .c-menu {
     position: absolute;
     right: 22px;
-    top: 28px;
+    top: 20px;
+    z-index: 97;
   }
 
   &__column {
@@ -15,7 +16,7 @@
 
   &__link {
     display: block;
-    padding: 32px 32px 31px 32px;
+    padding: 24px 32px 39px 32px;
     text-decoration: none;
 
     .c-icon {
@@ -30,7 +31,7 @@
 
   &__selection {
     display: block;
-    padding: 32px 32px 31px 32px;
+    padding: 24px 32px 39px 32px;
     position: relative;
     text-decoration: none;
 
@@ -79,7 +80,7 @@
     &__label {
       display: block;
       width: 82px;
-      bottom: -16px;
+      bottom: -12px;
       left: -60px;
       position: absolute;
       font-family: din-2014-narrow, sans-serif;

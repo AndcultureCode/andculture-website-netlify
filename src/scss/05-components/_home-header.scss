@@ -1,0 +1,32 @@
+.c-home-header {
+  @include site-container;
+  position: relative;
+
+  &__content {
+    @include grid-column(7.5);
+    @include grid-push(1.5);
+    padding-bottom: 300px;
+    padding-top: 292px;
+  }
+
+  &__scroll {
+    display: block;
+    padding-top: 124px;
+
+    @include font-style(
+      $font-narrow,                // Font Family
+      14px,                        // Font Size
+      get-color-neutral("light"),  // Font Color
+      false,                       // Font Weight
+      38px                         // Line Height
+    );
+
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  .c-icon-grid {
+    position: absolute;
+    right: -80px;
+  }
+}

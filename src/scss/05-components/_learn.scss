@@ -12,6 +12,11 @@
 
   &__content {
     @include grid-column(5);
+
+    @include respond-to("tablet") {
+      @include grid-column(12);
+      text-align: center;
+    }
   }
 
   p {

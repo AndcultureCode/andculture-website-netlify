@@ -1,6 +1,6 @@
 import React from 'react'
-import Icon from '../atoms/Icon';
-import Menu from '../atoms/Menu';
+import Icon  from '../atoms/Icon';
+import Menu  from '../atoms/Menu';
 
 const IconGrid = () => (
   <div className="c-icon-grid">
@@ -95,6 +95,7 @@ const IconGrid = () => (
       <IconLink name="square-play" />
     </IconGridColumn>
     <IconGridColumn>
+      <Menu />
       <IconLink name="empty" />
       <IconLink name="square-play" />
       <IconLink name="plus" />

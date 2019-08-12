@@ -19,10 +19,18 @@
 
   &__divider {
     padding: 0 10px;
+
+    @include respond-to("tablet") {
+      display: none;
+    }
   }
 
   &__logo {
     @include grid-column(3);
+
+    @include respond-to("tablet") {
+      @include grid-column(6);
+    }
 
     img {
       height: 40px;
@@ -31,13 +39,41 @@
   }
 
   &__info {
-    @include grid-column(6);
+    @include grid-column(9);
     padding-top: 14px;
-  }
 
-  &__copyright {
-    @include grid-column(3);
-    padding-top: 14px;
-    text-align: right;
+    @include respond-to("tablet") {
+      @include grid-column(6);
+    }
+
+    &__details {
+      display: inline-block;
+      width: 75%;
+
+      @include respond-to("tablet") {
+        display: block;
+        width: 100%;
+      }
+
+      > a {
+        @include respond-to("tablet") {
+          display: block;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__copyright {
+      display: inline-block;
+      width: 25%;
+      text-align: right;
+
+      @include respond-to("tablet") {
+        display: block;
+        opacity: 0.5;
+        width: 100%;
+        text-align: left;
+      }
+    }
   }
 }

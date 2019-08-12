@@ -17,6 +17,10 @@
   @return get-color("complimentary", $color);
 }
 
+@function get-color-neutral($color: "light") {
+  @return get-color("neutral", $color);
+}
+
 
 // Font Functions
 // ------------------------------------
