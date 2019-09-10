@@ -1,4 +1,14 @@
 .c-menu {
+  &__close {
+    position: absolute;
+    right: 34px;
+    top: 30px;
+
+    .c-icon {
+      font-size: 23px;
+    }
+  }
+
   &__toggle {
     @include font-style(
       $font-narrow,                     // Font Family
@@ -31,9 +41,13 @@
       @include animation(fade-in 0.4s alternate ease-out forwards);
     }
 
+    &__header {
+      height: 105px;
+      width: 100%;
+    }
+
     &__container {
       @include site-container;
-      padding-top: 105px;
 
       &__main {
         @include grid-column(5);

@@ -1,5 +1,6 @@
 import React     from 'react'
 import { Link } from 'gatsby';
+import Icon from './Icon';
 
 const Menu = class extends React.Component {
 
@@ -37,6 +38,13 @@ const Menu = class extends React.Component {
           className = "c-menu__toggle"
           onClick   = {(e) => this._toggleMenu(e)}>Menu</a>
         <div className={`c-menu__overlay ${this.state.activeMenuClass}`}>
+          <div className="c-menu__overlay__header">
+            <a href      = "#" 
+              className = "c-menu__close"
+              onClick   = {(e) => this._toggleMenu(e)}>
+              <Icon name="x" />
+            </a>
+          </div>
           <div className="c-menu__overlay__container">
             <MainNavigation />
             <aside className="c-menu__overlay__container__aside">
@@ -73,29 +81,6 @@ const Menu = class extends React.Component {
 // Components
 // --------------------------------------
 
-const MainNavigation = () => (
-  <nav className="c-menu__overlay__container__main">
-    <ul>
-      <li><Link to="">about</Link></li>
-      <li><Link to="">team</Link></li>
-      <li><Link to="">work</Link></li>
-      <li><Link to="">blog</Link></li>
-    </ul>
-  </nav>
-);
-
-const SubNavigation = () => (
-  <nav className="c-menu__overlay__container__aside__nav">
-    <ul>
-      <li><Link to="">lab</Link></li>
-      <li><Link to="">shop</Link></li>
-      <li><Link to="">careers</Link></li>
-      <li><Link to="">contact us</Link></li>
-      <li><Link to="" target="_blank">chipotle</Link></li>
-    </ul>
-  </nav>
-);
-
 const Locations = () => (
   <div className="c-menu__locations">
     <div className="c-menu__locations__column">
@@ -119,6 +104,29 @@ const Locations = () => (
       </p>
     </div>
   </div>
+);
+
+const MainNavigation = () => (
+  <nav className="c-menu__overlay__container__main">
+    <ul>
+      <li><Link to="">about</Link></li>
+      <li><Link to="">team</Link></li>
+      <li><Link to="">work</Link></li>
+      <li><Link to="">blog</Link></li>
+    </ul>
+  </nav>
+);
+
+const SubNavigation = () => (
+  <nav className="c-menu__overlay__container__aside__nav">
+    <ul>
+      <li><Link to="">lab</Link></li>
+      <li><Link to="">shop</Link></li>
+      <li><Link to="">careers</Link></li>
+      <li><Link to="">contact us</Link></li>
+      <li><Link to="" target="_blank">chipotle</Link></li>
+    </ul>
+  </nav>
 );
 
 
