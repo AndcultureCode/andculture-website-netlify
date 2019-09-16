@@ -9,6 +9,18 @@
     }
   }
 
+  &__logo {
+    height: 50px;
+    width: 42px;
+    left: 20px;
+    position: absolute;
+    top: 25px;
+
+    path {
+      fill: #fff;
+    }
+  }
+
   &__toggle {
     @include font-style(
       $font-narrow,                     // Font Family

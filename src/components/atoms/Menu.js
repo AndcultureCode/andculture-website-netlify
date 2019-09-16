@@ -1,6 +1,12 @@
-import React     from 'react'
-import { Link } from 'gatsby';
-import Icon from './Icon';
+import React         from 'react'
+import { Link }      from 'gatsby';
+import Icon          from './Icon';
+import LogoMenu      from "../../img/logo-menu.svg"
+import DribbbleIcon  from "../../img/social-dribbble.svg"
+import InstagramIcon from "../../img/social-instagram.svg"
+import LinkedInIcon  from "../../img/social-linkedin.svg"
+import TwitterIcon   from "../../img/social-twitter.svg"
+import LogoMarkSVG from './LogoMarkSVG';
 
 const Menu = class extends React.Component {
 
@@ -18,6 +24,7 @@ const Menu = class extends React.Component {
     this._onKeyDown  = this._onKeyDown.bind(this);
     this._toggleMenu = this._toggleMenu.bind(this);
   }
+
 
   // Lifecycle Methods
   // --------------------------------------
@@ -39,6 +46,7 @@ const Menu = class extends React.Component {
           onClick   = {(e) => this._toggleMenu(e)}>Menu</a>
         <div className={`c-menu__overlay ${this.state.activeMenuClass}`}>
           <div className="c-menu__overlay__header">
+            <LogoMarkSVG cssClass="c-menu__logo" />
             <a href      = "#" 
               className = "c-menu__close"
               onClick   = {(e) => this._toggleMenu(e)}>
@@ -56,6 +64,7 @@ const Menu = class extends React.Component {
       </div>
     );
   }
+
 
   // Private Methods
   // --------------------------------------
