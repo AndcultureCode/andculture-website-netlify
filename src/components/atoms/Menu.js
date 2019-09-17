@@ -7,6 +7,7 @@ import InstagramIcon from "../../img/social-instagram.svg"
 import LinkedInIcon  from "../../img/social-linkedin.svg"
 import TwitterIcon   from "../../img/social-twitter.svg"
 import LogoMarkSVG from './LogoMarkSVG';
+import SocialIcon from './SocialIcon';
 
 const Menu = class extends React.Component {
 
@@ -45,6 +46,7 @@ const Menu = class extends React.Component {
           className = "c-menu__toggle"
           onClick   = {(e) => this._toggleMenu(e)}>Menu</a>
         <div className={`c-menu__overlay ${this.state.activeMenuClass}`}>
+          <SocialLinks />
           <div className="c-menu__overlay__header">
             <LogoMarkSVG cssClass="c-menu__logo" />
             <a href      = "#" 
@@ -124,6 +126,31 @@ const MainNavigation = () => (
       <li><Link to="">blog</Link></li>
     </ul>
   </nav>
+);
+
+const SocialLinks = () => (
+  <div className="c-menu__social">
+    <a href="https://www.instagram.com/andculture/" target="_blank" className="c-menu__social__link">
+      <SocialIcon
+        type      = "instagram"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://www.linkedin.com/company/andculture/" target="_blank" className="c-menu__social__link">
+      <SocialIcon
+        type      = "linkedin"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://twitter.com/andculture" target="_blank" className="c-menu__social__link">
+      <SocialIcon
+        type      = "twitter"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://dribbble.com/andculture" target="_blank" className="c-menu__social__link">
+      <SocialIcon
+        type      = "dribbble"
+        className = "c-social-icon" />
+    </a>
+  </div>
 );
 
 const SubNavigation = () => (

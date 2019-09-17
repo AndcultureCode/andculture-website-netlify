@@ -17,7 +17,27 @@
     top: 25px;
 
     path {
-      fill: #fff;
+      fill: get-color-primary("white");
+    }
+  }
+
+  &__social {
+    width: 16px;
+    bottom: 31px;
+    left: 29px;
+    position: absolute;
+
+    &__link {
+      display: block;
+
+      .c-social-icon {
+        height: 16px;
+        width: 16px;
+      }
+
+      path, rect, circle {
+        fill: get-color-primary("white");
+      }
     }
   }
 
