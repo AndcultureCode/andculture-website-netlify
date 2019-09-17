@@ -1,22 +1,28 @@
 import React     from 'react'
 import { Link }  from 'gatsby';
+import PropTypes from 'prop-types';
 
-const Learn = () => (
+const Learn = ({ message }) => (
   <div className="c-learn">
     <div className="c-learn__container">
       <div className="c-learn__content">
         <p>
-          Confident enough to not capitalize our name, evidently. 
-          But friendly enough that you’ll be looking forward to our 
-          meetings and wondering what we’ll come up with next. 
+          { message }
         </p>
         <Link to="/about">
           Learn About Us
         </Link>
       </div>
-      <img src="" alt="" />
+      <div className="c-learn__image">
+        &nbsp;
+        <img src="https://via.placeholder.com/420x350/19A87C/ffffff" alt="Learn" />
+      </div>
     </div>
   </div>
 )
+
+Learn.propTypes = {
+  message: PropTypes.string,
+};
 
 export default Learn

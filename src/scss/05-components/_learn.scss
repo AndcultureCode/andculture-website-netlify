@@ -19,6 +19,18 @@
     }
   }
 
+  &__image {
+    @include grid-column(5);
+    @include grid-push(1);
+    position: relative;
+
+    img {
+      border-radius: 50%;
+      position: absolute;
+      top: -100px;
+    }
+  }
+
   p {
     font-size: 18px;
     font-weight: 300;

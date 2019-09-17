@@ -16,7 +16,9 @@ export const IndexPageTemplate = ({
 }) => (
   <div>
       <HomeHeader />
-      <Learn />
+      <Learn message="Confident enough to not capitalize our name, evidently. 
+          But friendly enough that you’ll be looking forward to our 
+          meetings and wondering what we’ll come up with next." />
 
     {/* <div
       className="full-width-image margin-top-0"
