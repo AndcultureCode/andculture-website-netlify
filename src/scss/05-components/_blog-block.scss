@@ -1,0 +1,43 @@
+.c-blog-block {
+  &__image {
+    position: relative;
+
+    img {
+      max-width: 100%;
+    }
+
+    &__label {
+      height: 32px;
+      width: 105px;
+      left: -8px;
+      position: absolute;
+      top: 23px;
+      background-color: get-color-primary("white");
+
+      @include font-style(
+        $font-narrow,               // Font Family
+        12px,                       // Font Size
+        get-color-primary("fresh"), // Font Color
+        700,                        // Font Weight
+        32px                        // Line Height
+      );
+
+      letter-spacing: 2px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+
+  p {
+    @include font-style(
+      $font-normal,                     // Font Family
+      18px,                             // Font Size
+      get-color-primary("after-hours"), // Font Color
+      300,                              // Font Weight
+      24px                              // Line Height
+    );
+
+    margin: 20px auto 0 auto;
+    width: 80%;
+  }
+}

@@ -1,0 +1,27 @@
+.c-casestudy-block {
+  &__image {
+    img {
+      max-width: 100%;
+    }
+  }
+
+  > img {
+    margin: 20px auto 0 auto;
+    max-height: 27px;
+    max-width: 30%;
+  }
+
+  &__tags {
+    @include font-style(
+      $font-narrow,               // Font Family
+      12px,                       // Font Size
+      get-color-primary("fresh"), // Font Color
+      700,                        // Font Weight
+      36px                        // Line Height
+    );
+
+    letter-spacing: 2px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

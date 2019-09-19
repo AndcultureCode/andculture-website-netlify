@@ -8,6 +8,16 @@ p {
   -webkit-margin-before: 0;
   -webkit-margin-after: 0;
 
+  &.asterisk {
+    @include font-style(
+      $font-normal,                // Font Family
+      40px,                        // Font Size
+      get-color-primary("black"),  // Font Color
+      300,                         // Font Weight
+      50px                         // Line Height
+    );
+  }
+
   &.intro {
     @include font-style(
       $font-normal,                     // Font Family

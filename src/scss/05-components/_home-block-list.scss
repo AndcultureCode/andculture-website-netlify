@@ -1,0 +1,36 @@
+.c-home-block-list {
+  @include site-container;
+  margin-bottom: 73px;
+
+  &__column {
+    @include grid-column(4);
+    text-align: center;
+
+    &:first-child {
+      padding-top: 34px;
+    }
+
+    &:nth-child(2) {
+      padding-top: 80px;
+    }
+
+    > p.asterisk {
+      margin: 102px auto 96px auto;
+      max-width: 60%;
+      text-align: left;
+    }
+
+    .c-blog-block,
+    .c-casestudy-block {
+      margin: 0 auto;
+      width: 90%;
+    }
+
+    .c-blog-block + .c-blog-block,
+    .c-casestudy-block + .c-casestudy-block,
+    .c-blog-block + .c-casestudy-block,
+    .c-casestudy-block + .c-blog-block {
+      margin-top: 88px;
+    }
+  }
+}
