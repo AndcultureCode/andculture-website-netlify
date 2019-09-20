@@ -7,6 +7,8 @@
     @include grid-push(1.5);
     padding-bottom: 300px;
     padding-top: 292px;
+    position: relative;
+    z-index: 1;
   }
 
   &__scroll {
@@ -28,5 +30,6 @@
   .c-icon-grid {
     position: absolute;
     right: -80px;
+    z-index: 2;
   }
 }

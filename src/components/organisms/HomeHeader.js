@@ -1,8 +1,10 @@
-import React    from 'react'
-import IconGrid from '../molecules/IconGrid';
+import React       from 'react'
+import IconGrid    from '../molecules/IconGrid';
+import HomeCollage from '../molecules/HomeCollage';
 
 const HomeHeader = () => (
   <header className="c-home-header">
+    <HomeCollage />
     <aside className="c-home-header__content">
       <h1>a<span className="fade">ndculture</span><br />
       design<br />
