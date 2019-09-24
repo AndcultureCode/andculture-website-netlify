@@ -1,5 +1,5 @@
 import React    from 'react'
-import Menu from '../atoms/Menu';
+import Menu     from '../molecules/Menu';
 
 const Header = () => (
   <header className="c-header">

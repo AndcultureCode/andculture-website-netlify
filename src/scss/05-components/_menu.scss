@@ -59,7 +59,6 @@
     top: 0;
     z-index: -1;
     background-color: get-color-primary("after-hours");
-    @include animation(fade-out 0.4s alternate ease-out forwards);
 
     &.active {
       opacity: 1;

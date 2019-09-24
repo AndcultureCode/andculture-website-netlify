@@ -1,0 +1,12 @@
+@include keyframes(dash) {
+  to { stroke-dashoffset: 0; }
+}
+
+.c-squiggle-line {
+  path {
+    fill: transparent;
+    stroke-dasharray: 9096;
+    stroke-dashoffset: 9096;
+    @include animation(dash 8s linear forwards);
+  }
+}

@@ -4,6 +4,7 @@
 
   &__column {
     @include grid-column(4);
+    position: relative;
     text-align: center;
 
     &:first-child {
@@ -31,6 +32,32 @@
     .c-blog-block + .c-casestudy-block,
     .c-casestudy-block + .c-blog-block {
       margin-top: 88px;
+    }
+
+    .c-brush__squiggle {
+      height: 253px;
+      width: 400px;
+      left: -314px;
+      position: absolute;
+      top: 480px;
+      z-index: -1;
+    }
+
+    .c-brush__scribble {
+      height: 98px;
+      margin-top: 48px;
+      width: 105px;
+      position: absolute;
+      right: 0;
+    }
+
+    .c-brush__siracha {
+      height: 249px;
+      width: 207px;
+      position: absolute;
+      right: -108px;
+      top: 108px;
+      z-index: -1;
     }
   }
 }

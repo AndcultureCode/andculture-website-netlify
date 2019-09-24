@@ -1,6 +1,6 @@
 import React from 'react'
 import Icon  from '../atoms/Icon';
-import Menu  from '../atoms/Menu';
+import Menu  from './Menu';
 
 const IconGrid = () => (
   <div className="c-icon-grid">

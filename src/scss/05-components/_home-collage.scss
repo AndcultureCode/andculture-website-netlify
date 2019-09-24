@@ -1,3 +1,28 @@
+@include keyframes(home-collage-longbrush) {
+  from  { left: 0; top: -734px; transform: rotate(-90deg); }
+  to    { left: -102px; top: -75px; transform: rotate(0deg); }
+}
+
+@include keyframes(home-collage-anglebrush) {
+  from  { left: -4000px; top: -247px; transform: rotate(-180deg); }
+  to    { left: -170px; top: 48px; transform: rotate(0deg); }
+}
+
+@include keyframes(home-collage-drops) {
+  from  { top: -302px; }
+  to    { left: -100px; top: 154px; }
+}
+
+@include keyframes(home-collage-triangle) {
+  from  { left: -100px; transform: rotate(0deg); }
+  to    { left: 80px; top: 514px; transform: rotate(359deg); }
+}
+
+@include keyframes(home-collage-squigglebrush) {
+  from  { transform: rotate(-80deg); }
+  to    { transform: rotate(80deg); }
+}
+
 .c-home-collage {
   position: absolute;
   z-index: 0;
@@ -9,6 +34,7 @@
     position: absolute;
     top: -75px;
     z-index: 1;
+    @include animation(home-collage-longbrush 1s alternate ease-out forwards);
   }
 
   &__anglebrush {
@@ -18,6 +44,7 @@
     position: absolute;
     top: 48px;
     z-index: 2;
+    @include animation(home-collage-anglebrush 2.5s alternate ease-out forwards);
   }
 
   &__drops {
@@ -27,6 +54,7 @@
     position: absolute;
     top: 154px;
     z-index: 3;
+    @include animation(home-collage-drops 2s alternate ease-out forwards);
   }
 
   &__violet__anglebrush {
@@ -36,6 +64,7 @@
     position: absolute;
     top: 140px;
     z-index: 0;
+    @include animation(fade-in 2s alternate ease-out forwards);
   }
 
   &__fresh__brush {
@@ -45,6 +74,7 @@
     position: absolute;
     top: 407px;
     z-index: 0;
+    @include animation(fade-in 3s alternate ease-out forwards);
   }
 
   &__dotpattern {
@@ -54,5 +84,57 @@
     position: absolute;
     top: 546px;
     z-index: 0;
+    @include animation(fade-in 5s alternate ease-out forwards);
+  }
+
+  &__squigglebrush {
+    height: 203px;
+    width: 350px;
+    left: -138px;
+    position: absolute;
+    top: 480px;
+    z-index: -1;
+    transform: rotate(80deg);
+    @include animation(home-collage-squigglebrush 2s alternate ease-out forwards);
+  }
+
+  &__siracha__anglebrush {
+    height: 142px;
+    width: 157px;
+    left: 110px;
+    position: absolute;
+    top: 620px;
+    z-index: 0;
+    @include animation(fade-in 5s alternate ease-out forwards);
+  }
+
+  &__triangle {
+    height: 77px;
+    width: 74px;
+    left: 80px;
+    position: absolute;
+    top: 514px;
+    z-index: 1;
+    @include animation(home-collage-triangle 2s alternate ease-out forwards);
+  }
+
+  &__rainbow {
+    height: 83px;
+    width: 89px;
+    left: 352px;
+    position: absolute;
+    top: 730px;
+    z-index: 1;
+    @include animation(fade-in 6s alternate ease-out forwards);
+  }
+
+  &__violet__lines {
+    height: 113px;
+    width: 165px;
+    left: 30px;
+    position: absolute;
+    top: 615px;
+    z-index: 2;
+    @include animation(fade-in 5s alternate ease-out forwards);
   }
 }

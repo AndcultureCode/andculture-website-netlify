@@ -12,6 +12,7 @@ import SquareImage            from "../../img/home-collage_square@2x.png";
 import SquiggleBrushImage     from "../../img/home-collage_squigglebrush@2x.png";
 import TriangleImage          from "../../img/home-collage_triangle@2x.png";
 import VioletAngleBrushImage  from "../../img/home-collage_violet_anglebrush@2x.png";
+import VioletLines            from "../../img/home-collage_violet_lines@2x.png";
 
 const HomeCollage = () => (
   <div className="c-home-collage">
@@ -21,6 +22,11 @@ const HomeCollage = () => (
     <img src={VioletAngleBrushImage} alt="Violet Angle Brush" className="c-home-collage__violet__anglebrush" />
     <img src={FreshBrushImage} alt="Fresh Brush" className="c-home-collage__fresh__brush" />
     <img src={DotPatternImage} alt="Dot Pattern" className="c-home-collage__dotpattern" />
+    <img src={SquiggleBrushImage} alt="Squiggle Brush" className="c-home-collage__squigglebrush" />
+    <img src={SirachaAngleBrushImage} alt="Siracha Angle Brush" className="c-home-collage__siracha__anglebrush" />
+    <img src={TriangleImage} alt="Triangle" className="c-home-collage__triangle" />
+    <img src={RainbowImage} alt="Rainbow" className="c-home-collage__rainbow" />
+    <img src={VioletLines} alt="Violet Lines" className="c-home-collage__violet__lines" />
   </div>
 )
 

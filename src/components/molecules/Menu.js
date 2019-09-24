@@ -1,13 +1,8 @@
 import React         from 'react'
 import { Link }      from 'gatsby';
-import Icon          from './Icon';
-import LogoMenu      from "../../img/logo-menu.svg"
-import DribbbleIcon  from "../../img/social-dribbble.svg"
-import InstagramIcon from "../../img/social-instagram.svg"
-import LinkedInIcon  from "../../img/social-linkedin.svg"
-import TwitterIcon   from "../../img/social-twitter.svg"
-import LogoMarkSVG from './LogoMarkSVG';
-import SocialIcon from './SocialIcon';
+import Icon          from '../atoms/Icon';
+import LogoMarkSVG   from '../atoms/LogoMarkSVG';
+import SocialIcon    from '../atoms/SocialIcon';
 
 const Menu = class extends React.Component {
 

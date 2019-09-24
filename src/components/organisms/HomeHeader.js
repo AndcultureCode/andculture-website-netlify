@@ -1,10 +1,12 @@
 import React       from 'react'
 import IconGrid    from '../molecules/IconGrid';
 import HomeCollage from '../molecules/HomeCollage';
+import SquiggleLine from '../atoms/SquiggleLine';
 
 const HomeHeader = () => (
   <header className="c-home-header">
     <HomeCollage />
+    <SquiggleLine />
     <aside className="c-home-header__content">
       <h1>a<span className="fade">ndculture</span><br />
       design<br />
