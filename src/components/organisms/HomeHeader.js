@@ -3,9 +3,11 @@ import IconGrid     from '../molecules/IconGrid';
 import HomeCollage  from '../molecules/HomeCollage';
 import SquiggleLine from '../atoms/SquiggleLine';
 import Menu         from '../molecules/Menu';
+import LogoMarkSVG  from '../atoms/LogoMarkSVG';
 
 const HomeHeader = () => (
   <header className="c-home-header">
+    <LogoMarkSVG cssClass="c-home-header__logo" />
     <HomeCollage />
     <SquiggleLine />
     <aside className="c-home-header__content">
