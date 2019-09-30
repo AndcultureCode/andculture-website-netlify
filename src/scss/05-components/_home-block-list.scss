@@ -2,8 +2,8 @@
   @include site-container;
   margin-bottom: 73px;
 
-  @include respond-to("tablet") {
-    overflow: hidden;
+  @media (max-width: 1180px) {
+     overflow: hidden;
   }
 
   &__column {
@@ -79,7 +79,7 @@
       height: 249px;
       width: 207px;
       position: absolute;
-      right: -108px;
+      right: -54px;
       top: 108px;
       z-index: -1;
     }
