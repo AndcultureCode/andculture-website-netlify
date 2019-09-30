@@ -35,6 +35,10 @@
     top: -75px;
     z-index: 1;
     @include animation(home-collage-longbrush 1s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__anglebrush {
@@ -45,6 +49,10 @@
     top: 48px;
     z-index: 2;
     @include animation(home-collage-anglebrush 2.5s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__drops {
@@ -55,6 +63,10 @@
     top: 154px;
     z-index: 3;
     @include animation(home-collage-drops 2s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__violet__anglebrush {
@@ -65,6 +77,10 @@
     top: 140px;
     z-index: 0;
     @include animation(fade-in 2s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__fresh__brush {
@@ -75,6 +91,10 @@
     top: 407px;
     z-index: 0;
     @include animation(fade-in 3s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__dotpattern {
@@ -85,6 +105,10 @@
     top: 546px;
     z-index: 0;
     @include animation(fade-in 5s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__squigglebrush {
@@ -96,6 +120,10 @@
     z-index: -1;
     transform: rotate(80deg);
     @include animation(home-collage-squigglebrush 2s alternate ease-out forwards);
+
+    @include respond-to("tablet") {
+      left: 0;
+    }
   }
 
   &__siracha__anglebrush {

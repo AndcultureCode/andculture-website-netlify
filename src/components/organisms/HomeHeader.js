@@ -1,7 +1,8 @@
-import React       from 'react'
-import IconGrid    from '../molecules/IconGrid';
-import HomeCollage from '../molecules/HomeCollage';
+import React        from 'react'
+import IconGrid     from '../molecules/IconGrid';
+import HomeCollage  from '../molecules/HomeCollage';
 import SquiggleLine from '../atoms/SquiggleLine';
+import Menu         from '../molecules/Menu';
 
 const HomeHeader = () => (
   <header className="c-home-header">
@@ -12,6 +13,7 @@ const HomeHeader = () => (
       design<br />
       company</h1>
       <label className="c-home-header__scroll">Take a stroll, then scroll</label>
+      <Menu />
     </aside>
     <IconGrid />
   </header>

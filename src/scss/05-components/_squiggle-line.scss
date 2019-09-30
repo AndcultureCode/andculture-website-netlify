@@ -3,6 +3,10 @@
 }
 
 .c-squiggle-line {
+  @include respond-to("tablet") {
+    width: 1575px;
+  }
+
   path {
     fill: transparent;
     stroke-dasharray: 9096;

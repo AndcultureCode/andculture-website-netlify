@@ -2,17 +2,41 @@
   @include site-container;
   margin-bottom: 73px;
 
+  @include respond-to("tablet") {
+    overflow: hidden;
+  }
+
   &__column {
     @include grid-column(4);
     position: relative;
     text-align: center;
 
+    @include respond-to("tablet") {
+      @include grid-column(11);
+      @include grid-push(0.5);
+      margin-bottom: 88px;
+    }
+
     &:first-child {
       padding-top: 34px;
+
+      @include respond-to("tablet") {
+        padding-top: 0;
+      }
     }
 
     &:nth-child(2) {
       padding-top: 80px;
+
+      @include respond-to("tablet") {
+        padding-top: 0;
+      }
+    }
+
+    &:last-child {
+      @include respond-to("tablet") {
+        margin-bottom: 0;
+      }
     }
 
     > p.asterisk {

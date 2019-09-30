@@ -39,5 +39,11 @@
 
     margin: 20px auto 0 auto;
     width: 80%;
+
+    @include respond-to("tablet") {
+      width: 86%;
+      font-size: 36px;
+      line-height: 48px;
+    }
   }
 }

@@ -16,6 +16,11 @@ p {
       300,                         // Font Weight
       50px                         // Line Height
     );
+
+    @include respond-to("tablet") {
+      font-size: 80px;
+      line-height: 100px;
+    }
   }
 
   &.intro {

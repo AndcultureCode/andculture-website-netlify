@@ -2,6 +2,10 @@
   @include site-container;
   position: relative;
 
+  @include respond-to("tablet") {
+    overflow: hidden;
+  }
+
   &__content {
     @include grid-column(7.5);
     @include grid-push(1.5);
@@ -9,6 +13,23 @@
     padding-top: 292px;
     position: relative;
     z-index: 1;
+
+    > .c-menu {
+      display: none;
+      position: absolute;
+      right: 22px;
+      top: 20px;
+      z-index: 97;
+
+      @include respond-to("tablet") {
+        display: block;
+      }
+    }
+
+    @include respond-to("tablet") {
+      @include grid-column(8);
+      @include grid-push(4);
+    }
   }
 
   &__scroll {
@@ -26,17 +47,30 @@
     letter-spacing: 1px;
     text-align: center;
     text-transform: uppercase;
+
+    @include respond-to("tablet") {
+      text-align: left;
+    }
   }
 
   .c-icon-grid {
     position: absolute;
     right: -80px;
     z-index: 2;
+
+    @include respond-to("tablet") {
+      display: none;
+    }
   }
 
   .c-squiggle-line {
     left: -264px;
     position: absolute;
     z-index: -1;
+
+    @include respond-to("tablet") {
+      left: -326px;
+      top: -255px;
+    }
   }
 }

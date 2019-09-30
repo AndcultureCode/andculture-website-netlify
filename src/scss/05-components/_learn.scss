@@ -6,6 +6,10 @@
   width: 100%;
   background-color: get-color-primary("fog");
 
+  @include respond-to("tablet") {
+    margin-top: 0;
+  }
+
   &__container {
     @include site-container;
   }
@@ -49,6 +53,11 @@
     font-weight: 300;
     letter-spacing: 0.5px;
     line-height: 32px;
+
+    @include respond-to("tablet") {
+      font-size: 36px;
+      line-height: 64px;
+    }
   }
 
   p + a {
@@ -61,5 +70,9 @@
     letter-spacing: 1px;
     text-decoration: underline;
     text-transform: uppercase;
+
+    @include respond-to("tablet") {
+      font-size: 28px;
+    }
   }
 }
