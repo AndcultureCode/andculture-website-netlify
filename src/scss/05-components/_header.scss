@@ -1,11 +1,33 @@
 .c-header{
   @include site-container;
+  height: 70px;
   position: relative;
+
+  &__logo {
+    height: 50px;
+    width: 43px;
+    left: -20px;
+    position: absolute;
+    top: 20px;
+    z-index: 5;
+
+    @include respond-to("desktop") {
+      left: 30px;
+    }
+
+    path {
+      fill: get-color-primary("fresh");
+    }
+  }
 
   .c-menu {
     position: absolute;
     right: -60px;
     top: 28px;
     z-index: 97;
+
+    @include respond-to("desktop") {
+      right: 30px;
+    }
   }
 }

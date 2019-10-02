@@ -1,0 +1,19 @@
+.c-link-button {
+  display: inline-block;
+  height: 46px;
+  padding-left: 48px;
+  padding-right: 47px;
+  background-color: get-color-primary("fresh");
+
+  @include font-style(
+    $font-narrow,               // Font Family
+    16px,                       // Font Size
+    get-color-primary("white"), // Font Color
+    700,                        // Font Weight
+    46px                        // Line Height
+  );
+
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
