@@ -1,10 +1,10 @@
 import React                  from 'react';
-import BlogBlock              from '../molecules/BlogBlock';
-import CaseStudyBlock         from '../molecules/CaseStudyBlock';
-import Paragraph              from '../atoms/Paragraph';
-import SquiggleBrushImage     from "../../img/home-collage_squigglebrush@2x.png";
-import SirachBrushImage       from "../../img/home-collage_siracha_brush@2x.png";
-import ScribbleImage          from "../../img/home-collage_scribble@2x.png";
+import BlogBlock              from '../../molecules/BlogBlock';
+import CaseStudyBlock         from '../../molecules/CaseStudyBlock';
+import Paragraph              from '../../atoms/Paragraph';
+import SquiggleBrushImage     from "../../../img/home-collage_squigglebrush@2x.png";
+import SirachBrushImage       from "../../../img/home-collage_siracha_brush@2x.png";
+import ScribbleImage          from "../../../img/home-collage_scribble@2x.png";
 
 const HomeBlockList = () => (
   <div className="c-home-block-list">

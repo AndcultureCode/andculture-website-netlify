@@ -3,8 +3,8 @@ import PropTypes     from 'prop-types'
 import { graphql }   from 'gatsby'
 import Layout        from '../components/Layout'
 import Learn         from '../components/molecules/Learn';
-import HomeHeader    from '../components/organisms/HomeHeader';
-import HomeBlockList from '../components/organisms/HomeBlockList';
+import HomeHeader    from '../components/organisms/home/HomeHeader';
+import HomeBlockList from '../components/organisms/home/HomeBlockList';
 
 export const IndexPageTemplate = ({
   image,

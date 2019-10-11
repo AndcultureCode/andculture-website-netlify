@@ -1,0 +1,31 @@
+.c-about-header {
+  position: relative;
+  padding-top: 183px;
+
+  &__teabrush {
+    left: -180px;
+    position: absolute;
+    top: 0;
+  }
+
+  &__squaregrid {
+    left: 14px;
+    position: absolute;
+    top: 146px;
+  }
+
+  &__birds {
+    position: absolute;
+    right: -80px;
+    top: 349px;
+  }
+
+  &__content {
+    @include site-container;
+
+    &__title {
+      @include grid-column(9);
+      @include grid-push(1);
+    }
+  }
+}

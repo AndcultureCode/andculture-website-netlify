@@ -1,9 +1,9 @@
-import React        from 'react'
-import IconGrid     from '../molecules/IconGrid';
-import HomeCollage  from '../molecules/HomeCollage';
-import SquiggleLine from '../atoms/SquiggleLine';
-import Menu         from '../molecules/Menu';
-import LogoMarkSVG  from '../atoms/LogoMarkSVG';
+import React        from 'react';
+import IconGrid     from '../../molecules/IconGrid';
+import HomeCollage  from '../../molecules/HomeCollage';
+import SquiggleLine from '../../atoms/SquiggleLine';
+import Menu         from '../../molecules/Menu';
+import LogoMarkSVG  from '../../atoms/LogoMarkSVG';
 
 const HomeHeader = () => (
   <header className="c-home-header">
@@ -21,4 +21,4 @@ const HomeHeader = () => (
   </header>
 );
 
-export default HomeHeader
+export default HomeHeader;
