@@ -1,5 +1,8 @@
 .c-about-department-block {
   @include clearfix();
+  float: left;
+  width: 500px;
+
   position: relative;
   > h1 {
     @include font-style($font-narrow, 120px, #DEEAEC, 800, 120px);
