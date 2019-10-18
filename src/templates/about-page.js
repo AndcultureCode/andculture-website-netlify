@@ -6,6 +6,7 @@ import Content, { HTMLContent } from '../components/Content'
 import Talk                     from '../components/molecules/Talk'
 import Header                   from '../components/organisms/Header'
 import AboutHeader from '../components/organisms/about/AboutHeader'
+import DepartmentList from "../components/organisms/about/DepartmentList"
 
 export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
@@ -15,6 +16,7 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
       <Header />
       <AboutHeader />
       <Talk message="Now, you've learned a lot about us, time for you to us about yourself." />
+      <DepartmentList />
     </Fragment>
   )
 }

@@ -1,0 +1,30 @@
+.c-about-department-list {
+  @include clearfix();
+  margin: 0px 150px;
+  &__item {
+    position: relative;
+    // width: 50%;
+    // float: left;
+    &:nth-child(2) {
+      margin-top: 350px;
+    }
+    &:nth-child(3) {
+    }
+  }
+  &__geometric-block {
+    position: absolute;
+    top: 100px;
+    left: 500px;
+  }
+  &__fresh-circle {
+    top: 0;
+    left: 0;
+    width: 207px;
+    height: 250px;
+  }
+  &__violet-square {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
