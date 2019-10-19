@@ -1,9 +1,7 @@
 .c-about-department-block {
-  @include clearfix();
-  float: left;
   width: 500px;
-
   position: relative;
+  clear: both;
   > h1 {
     @include font-style($font-narrow, 120px, #DEEAEC, 800, 120px);
     top: 0;
@@ -26,10 +24,5 @@
   &__list {
     @include font-style($font-narrow, map-get($font-sizes, "large"), #083744, 800, 32px);
     margin-left: 22px;
-  }
-  &__geometric-block {
-    position: absolute;
-    top: 100px;
-    left: 500px;
   }
 }

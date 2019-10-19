@@ -1,24 +1,28 @@
 .c-about-department-list {
-  @include clearfix();
-  margin: 0px 150px;
+  margin: 0px auto;
+  max-width: 1180px; // inherit from site body?
+  clear: both;
   &__item {
+    display: flex;
+    margin: 0 24px;
     position: relative;
-    // width: 50%;
-    // float: left;
-    // width: 500px;
-    &:nth-child(2) {
-      // margin-top: 350px;
+    &:nth-child(even) {
+      margin-top: -150px;
+      flex-direction: row-reverse;
     }
-    &:nth-child(3) {
+    &:first-of-type {
+      margin-top: 0;
     }
+    
   }
   &__geometric-block {
     position: absolute;
-    top: 100px;
+    top: 232px;
     left: 500px;
   }
   &__fresh-circle {
     float: left;
+    margin-right: 45px;
     top: 0;
     left: 0;
     width: 207px;
@@ -26,7 +30,8 @@
   }
   &__violet-square {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 118px;
+    left: 142x;
+    z-index: 1;
   }
 }
