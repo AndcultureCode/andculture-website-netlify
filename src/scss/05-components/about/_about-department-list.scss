@@ -1,10 +1,10 @@
 .c-about-department-list {
-  margin: 0px auto;
-  max-width: 1180px; // inherit from site body?
-  clear: both;
+  margin:    0px auto;
+  max-width: 1180px;    // inherit from site body?
+  clear:     both;
   &__item {
-    display: flex;
-    margin: 0 24px;
+    display:  flex;
+    margin:   0 24px;
     position: relative;
     &:nth-child(even) {
       margin-top: -150px;
@@ -17,21 +17,36 @@
   }
   &__geometric-block {
     position: absolute;
-    top: 232px;
-    left: 500px;
+    top:      232px;
+    left:     500px;
   }
   &__fresh-circle {
-    float: left;
+    float:        left;
     margin-right: 49px;
-    top: 0;
-    left: 0;
-    width: 207px;
-    height: 250px;
+    top:          0;
+    left:         0;
+    width:        207px;
+    height:       250px;
   }
   &__violet-square {
     position: absolute;
-    top: 118px;
-    left: 134px;
-    z-index: 1;
+    top:      118px;
+    left:     134px;
+    z-index:  1;
+  }
+  &__brush-squares {
+    position: absolute;
+    top:      163px;
+    right:    -66px;
+    height:   226px;
+    width:    254px;
+  }
+  &__scribbles {
+    position: absolute;
+    top:      240px;
+    right:    100px;
+    height:   174px;
+    width:    164px;
+    z-index:  1;
   }
 }
