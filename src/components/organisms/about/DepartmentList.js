@@ -8,6 +8,7 @@ import StickyNoteBrushSquares from "../../../img/about-sticky-note_brush-squares
 
 const DepartmentList = () => (
   <div className="c-about-department-list">
+    <h2>how do you do what you do?</h2>
     <div className="c-about-department-list__item">
     <img src={GeometricBlock} className="c-about-department-list__geometric-block" />
       <DepartmentBlock />

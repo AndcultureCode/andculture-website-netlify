@@ -15,8 +15,8 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
     <Fragment>
       <Header />
       <AboutHeader />
-      <Talk message="Now, you've learned a lot about us, time for you to us about yourself." />
       <DepartmentList />
+      <Talk message="Now, you've learned a lot about us, time for you to us about yourself." />
     </Fragment>
   )
 }

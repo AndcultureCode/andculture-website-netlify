@@ -1,12 +1,16 @@
 .c-about-department-list {
-  margin:    0px auto;
+  margin:    0px auto 118px auto;
   max-width: 1180px;    // inherit from site body?
-  clear:     both;
+  h2 {
+    margin-bottom: 82px;
+    font-weight: 400;
+    text-align: center;
+  }
   &__item {
     display:  flex;
     margin:   0 24px;
     position: relative;
-    &:nth-child(even) {
+    &:nth-of-type(even) {
       margin-top: -150px;
       flex-direction: row-reverse;
     }
