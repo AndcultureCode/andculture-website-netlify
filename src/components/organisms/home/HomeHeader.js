@@ -31,6 +31,13 @@ const HomeHeader = () => {
     ]
   }
 
+  if (activeIcon === "blog") {
+    header = [
+      (<h1>look into our<br />world</h1>),
+      (<label className="c-home-header__scroll">check out our musings in the blog</label>)
+    ]
+  }
+
   return (
     <header className="c-home-header">
       <LogoMarkSVG cssClass="c-home-header__logo" />
