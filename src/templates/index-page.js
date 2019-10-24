@@ -5,7 +5,7 @@ import Layout        from '../components/Layout'
 import Learn         from '../components/molecules/Learn';
 import HomeHeader    from '../components/organisms/home/HomeHeader';
 import HomeBlockList from '../components/organisms/home/HomeBlockList';
-import Talk from '../components/molecules/Talk';
+import Talk          from '../components/molecules/Talk';
 
 export const IndexPageTemplate = ({
   image,
