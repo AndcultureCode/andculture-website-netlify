@@ -4,6 +4,7 @@ import { graphql }          from 'gatsby'
 import Layout               from '../components/Layout'
 import Learn                from '../components/molecules/Learn';
 import Talk                 from '../components/molecules/Talk';
+import DepartmentList       from "../components/organisms/about/DepartmentList"
 import HomeHeader           from '../components/organisms/home/HomeHeader';
 import HomeBlockList        from '../components/organisms/home/HomeBlockList';
 import OurFriends           from '../components/molecules/OurFriends';
@@ -23,6 +24,7 @@ export const IndexPageTemplate = ({
       {/* <Learn message="Confident enough to not capitalize our name, evidently.
           But friendly enough that you’ll be looking forward to our
           meetings and wondering what we’ll come up with next." /> */}
+      <DepartmentList />
       <OurFriends/>
       <Talk message="We’re looking for partners who are tired of what’s been done and want the not even yet imagined." />
 
