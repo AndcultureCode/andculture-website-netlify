@@ -1,0 +1,14 @@
+ul {
+  list-style: none;
+  > li {
+    display: block;
+    text-transform: uppercase;
+    text-indent: -0.75em; 
+    &:before {
+      // Custom plus sign bullet point
+      width: 1em;
+      margin-right: 0.5em;
+      content: "+";
+    }
+  }
+}

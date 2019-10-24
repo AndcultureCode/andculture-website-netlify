@@ -1,0 +1,28 @@
+.c-about-department-block {
+  width: 500px;
+  position: relative;
+  clear: both;
+  > h1 {
+    @include font-style($font-narrow, 120px, #DEEAEC, 800, 120px);
+    top: 0;
+    left: 0;
+    width: 365px;
+    z-index: -1;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+  }
+  &__message {
+    position: absolute;
+    top: 155px;
+    left: 200px;
+    max-width: 302px;
+    > p {
+      @include font-style($font-normal, 20px, #083744, 200, 32px);
+    }
+  }
+  &__list {
+    @include font-style($font-narrow, map-get($font-sizes, "large"), #083744, 800, 32px);
+    margin-left: 22px;
+  }
+}
