@@ -33,8 +33,8 @@ const HomeHeader = () => {
 
   if (activeIcon === "blog") {
     header = [
-      (<h1>look into our<br />world</h1>),
-      (<label className="c-home-header__scroll">check out our musings in the blog</label>)
+      (<h1 key="0">look into our<br />world</h1>),
+      (<label key="1" className="c-home-header__scroll">check out our musings in the blog</label>)
     ]
   }
 
