@@ -20,14 +20,14 @@ const HomeHeader = () => {
   }
 
   let header = [
-    (<h1>a<span className="fade">ndculture</span><br />design<br />company</h1>),
-    (<label className="c-home-header__scroll">Take a stroll, then scroll</label>)
+    (<h1 key="0">a<span className="fade">ndculture</span><br />design<br />company</h1>),
+    (<label key="1" className="c-home-header__scroll">Take a stroll, then scroll</label>)
   ]
 
   if (activeIcon === "about") {
     header = [
-      (<h1>process can<br />be a dirty word</h1>),
-      (<label className="c-home-header__scroll">learn more about the andculture way</label>)
+      (<h1 key="0">process can<br />be a dirty word</h1>),
+      (<label key="1" className="c-home-header__scroll">learn more about the andculture way</label>)
     ]
   }
 
