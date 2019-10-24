@@ -1,0 +1,21 @@
+.c-our-friends {
+  background-color: get-color-primary("fog");
+  padding: 85px 0;
+
+
+  &__wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+
+    &__label {
+      @include font-style(
+          $font-normal,                // Font Family
+          16px,                        // Font Size
+          get-color-primary("fresh"),  // Font Color
+          600,                         // Font Weight
+          46px                         // Line Height
+        );
+      text-transform: uppercase;
+    }
+  }
+}
