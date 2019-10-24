@@ -40,8 +40,8 @@ const HomeHeader = () => {
 
   if (activeIcon === "work") {
     header = [
-      (<h1>we make it look<br />like magic</h1>),
-      (<label className="c-home-header__scroll">learn more about who we help &amp; how</label>)
+      (<h1 key="0">we make it look<br />like magic</h1>),
+      (<label key="1" className="c-home-header__scroll">learn more about who we help &amp; how</label>)
     ]
   }
 
