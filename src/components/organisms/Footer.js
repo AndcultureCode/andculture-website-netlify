@@ -1,7 +1,8 @@
-import React    from 'react'
-import Logo     from "../../img/logo.svg"
-import { Link } from 'gatsby';
-import MobileBreak from '../atoms/MobileBreak';
+import React        from 'react'
+import Logo         from "../../img/logo.svg"
+import { Link }     from 'gatsby';
+import MobileBreak  from '../atoms/MobileBreak';
+import SocialIcon   from '../atoms/SocialIcon';
 
 const FooterDivider = () => (
   <span className="c-footer__divider">|</span>
@@ -23,8 +24,34 @@ const Footer = () => (
       <p className="c-footer__info__copyright">
         &copy; andculture. all rights reserved.
       </p>
+      <SocialLinks />
     </div>
   </footer>
+);
+
+const SocialLinks = () => (
+  <div className="c-footer__social">
+    <a href="https://www.instagram.com/andculture/" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "instagram"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://www.linkedin.com/company/andculture/" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "linkedin"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://twitter.com/andculture" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "twitter"
+        className = "c-social-icon" />
+    </a>
+    <a href="https://dribbble.com/andculture" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "dribbble"
+        className = "c-social-icon" />
+    </a>
+  </div>
 );
 
 export default Footer

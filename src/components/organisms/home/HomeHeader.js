@@ -17,7 +17,7 @@ const HomeHeader = () => {
 
   return (
     <header className="c-home-header">
-      <LogoMarkSVG cssClass="c-home-header__logo" />
+      <LogoMarkSVG className="c-home-header__logo" />
       <HomeCollage activeVideo={activeVideo} />
       {/* <SquiggleLine /> */}
       <aside className="c-home-header__content">

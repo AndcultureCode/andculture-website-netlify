@@ -76,4 +76,19 @@
       }
     }
   }
+
+  &__social {
+    float: right;
+    padding-right: 50px;
+
+    &__link {
+      display: inline-block;
+      margin-left: 5px;
+      width: 18px;
+
+      path, rect, circle {
+        fill: get-color-primary("fresh");
+      }
+    }
+  }
 }
