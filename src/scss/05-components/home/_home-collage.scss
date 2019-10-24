@@ -26,6 +26,7 @@
 .c-home-collage {
   position: absolute;
   z-index: 0;
+  left: -412px;
 
   &__longbrush {
     height: 659px;
@@ -164,5 +165,12 @@
     top: 615px;
     z-index: 2;
     @include animation(fade-in 5s alternate ease-out forwards);
+  }
+
+  &__video {
+
+    &.-preload {
+      display: none;
+    }
   }
 }

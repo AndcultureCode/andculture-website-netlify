@@ -9,9 +9,14 @@ const Talk = ({ message }) => (
         { message }
       </p>
       <div className="c-talk__wrapper__action">
-        <LinkButton
+        {/* <LinkButton
           text = "Let's Talk"
-          url  = "/contact" />
+          url  = "/contact" /> */}
+        <a
+          className = "c-link-button"
+          href      = "mailto:hello@andculture.com">
+            Let's Talk
+        </a>
       </div>
     </div>
   </div>

@@ -1,8 +1,9 @@
+import PropTypes from 'prop-types'
 import React from 'react'
 import Icon  from '../atoms/Icon';
 import Menu  from './Menu';
 
-const IconGrid = () => (
+const IconGrid = ({onHover}) => (
   <div className="c-icon-grid">
     <IconGridColumn>
       <IconBlock name="empty" />
@@ -32,16 +33,19 @@ const IconGrid = () => (
     </IconGridColumn>
     <IconGridColumn>
       <IconBlock name="triangle" />
-      <IconSelection 
-        name  = "eye"
-        type  = "about"
-        label = "About Us" />
+      <IconSelection
+        name    = "eye"
+        type    = "about"
+        label   = "About Us"
+        onHover = {onHover} />
       <IconBlock name="raindrop-full" />
       <IconBlock name="x" />
-      <IconSelection 
-        name  = "triangle"
-        type  = "blog"
-        label = "The Blog" />
+      {/* <IconSelection
+        name    = "triangle"
+        type    = "blog"
+        label   = "The Blog"
+        onHover = {onHover} /> */}
+      <IconBlock name="triangle" />
       <IconBlock name="square-play" />
       <IconBlock name="circle-full" />
       <IconBlock name="x" />
@@ -69,10 +73,11 @@ const IconGrid = () => (
       <IconBlock name="plus" />
       <IconBlock name="square-play" />
       <IconBlock name="circle" />
-      <IconSelection 
-        name  = "go-sign"
-        type  = "team"
-        label = "The Team" />
+      <IconSelection
+        name    = "go-sign"
+        type    = "contact"
+        label   = "Contact"
+        onHover = {onHover} />
       <IconBlock name="triangle" />
       <IconBlock name="square-play" />
       <IconBlock name="raindrop" />
@@ -82,10 +87,11 @@ const IconGrid = () => (
       <IconBlock name="eye" />
       <IconBlock name="x" />
       <IconBlock name="circle-full" />
-      <IconSelection 
-        name  = "square-washer work"
-        type  = "work"
-        label = "The Work" />
+      <IconSelection
+        name    = "square-washer work"
+        type    = "work"
+        label   = "The Work"
+        onHover = {onHover} />
       <IconBlock name="eye" />
       <IconBlock name="square-washer" />
       <IconBlock name="eye" />
@@ -95,7 +101,7 @@ const IconGrid = () => (
       <IconBlock name="square-play" />
     </IconGridColumn>
     <IconGridColumn>
-      <Menu />
+      {/* <Menu /> */}
       <IconBlock name="empty" />
       <IconBlock name="square-play" />
       <IconBlock name="plus" />
@@ -129,11 +135,15 @@ const IconLink = ({name}) => (
   </a>
 );
 
-const IconSelection = ({name, type, label}) => (
-  <a href="#" title={label} className={`c-icon-grid__selection ${type}`}>
+const IconSelection = ({name, type, label, onHover}) => (
+  <a href="#" title={label} className={`c-icon-grid__selection ${type}`} onMouseEnter={(e) => onHover(e, type)} onMouseLeave={(e) => onHover(e, type)}>
     <Icon name={name} />
     <label className="c-icon-grid__selection__label">{label}</label>
   </a>
 )
+
+IconGrid.propTypes = {
+  onHover: PropTypes.func,
+}
 
 export default IconGrid

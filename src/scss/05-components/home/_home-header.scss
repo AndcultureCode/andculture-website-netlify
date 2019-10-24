@@ -9,10 +9,10 @@
   &__logo {
     height: 50px;
     width: 43px;
-    left: -20px;
+    left: 0px;
     position: absolute;
-    top: 20px;
-    z-index: 5;
+    top: 5px;
+    z-index: 2;
 
     path {
       fill: get-color-primary("white");

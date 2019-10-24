@@ -1,3 +1,4 @@
+import PropTypes              from 'prop-types'
 import React                  from 'react'
 import AngleBrushImage        from "../../img/home-collage_anglebrush@2x.png";
 import DotPatternImage        from "../../img/home-collage_dotpattern@2x.png";
@@ -13,10 +14,20 @@ import SquiggleBrushImage     from "../../img/home-collage_squigglebrush@2x.png"
 import TriangleImage          from "../../img/home-collage_triangle@2x.png";
 import VioletAngleBrushImage  from "../../img/home-collage_violet_anglebrush@2x.png";
 import VioletLines            from "../../img/home-collage_violet_lines@2x.png";
+import BackgroundVideo        from "../atoms/BackgroundVideo";
 
-const HomeCollage = () => (
+const HomeCollage = ({ activeVideo }) => (
   <div className="c-home-collage">
-    <img src={LongBrushImage} alt="Yellow Long Brush Stroke" className="c-home-collage__longbrush" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "default"} url="/video/default.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "about"} url="/video/about.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "aboutOut"} url="/video/default.mp4" />
+    {/* <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "blog"} url="/video/blog.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "blogOut"} url="/video/default.mp4" /> */}
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contact"} url="/video/contact.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contactOut"} url="/video/default.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "work"} url="/video/work.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "workOut"} url="/video/default.mp4" />
+    {/* <img src={LongBrushImage} alt="Yellow Long Brush Stroke" className="c-home-collage__longbrush" />
     <img src={AngleBrushImage} alt="Angle Brush Stroke" className="c-home-collage__anglebrush" />
     <img src={DropsImage} alt="Drops" className="c-home-collage__drops" />
     <img src={VioletAngleBrushImage} alt="Violet Angle Brush" className="c-home-collage__violet__anglebrush" />
@@ -26,11 +37,12 @@ const HomeCollage = () => (
     <img src={SirachaAngleBrushImage} alt="Siracha Angle Brush" className="c-home-collage__siracha__anglebrush" />
     <img src={TriangleImage} alt="Triangle" className="c-home-collage__triangle" />
     <img src={RainbowImage} alt="Rainbow" className="c-home-collage__rainbow" />
-    <img src={VioletLines} alt="Violet Lines" className="c-home-collage__violet__lines" />
+    <img src={VioletLines} alt="Violet Lines" className="c-home-collage__violet__lines" /> */}
   </div>
 )
 
-// HomeCollage.propTypes = {
-// };
+HomeCollage.propTypes = {
+  activeVideo: PropTypes.string,
+};
 
 export default HomeCollage;
