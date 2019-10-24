@@ -6,13 +6,29 @@ import Menu                 from '../../molecules/Menu';
 import LogoMarkSVG          from '../../atoms/LogoMarkSVG';
 
 const HomeHeader = () => {
+  const [ activeIcon, setActiveIcon ] = useState(null);
   const [ activeVideo, setActiveVideo ] = useState("default");
 
-  const handleOnHover = (e, video) => {
+  const handleOnHover = (e, type) => {
     if (e.type === "mouseleave") {
-      video += "Out";
+      setActiveIcon(null);
+      setActiveVideo(`${type}Out`);
+      return;
     }
-    setActiveVideo(video);
+    setActiveIcon(type);
+    setActiveVideo(type);
+  }
+
+  let header = [
+    (<h1>a<span className="fade">ndculture</span><br />design<br />company</h1>),
+    (<label className="c-home-header__scroll">Take a stroll, then scroll</label>)
+  ]
+
+  if (activeIcon === "about") {
+    header = [
+      (<h1>process can<br />be a dirty word</h1>),
+      (<label className="c-home-header__scroll">learn more about the andculture way</label>)
+    ]
   }
 
   return (
@@ -21,10 +37,7 @@ const HomeHeader = () => {
       <HomeCollage activeVideo={activeVideo} />
       {/* <SquiggleLine /> */}
       <aside className="c-home-header__content">
-        <h1>a<span className="fade">ndculture</span><br />
-        design<br />
-        company</h1>
-        <label className="c-home-header__scroll">Take a stroll, then scroll</label>
+        { header.map((line) => line)}
         {/* <Menu /> */}
       </aside>
       <IconGrid onHover={handleOnHover} />
