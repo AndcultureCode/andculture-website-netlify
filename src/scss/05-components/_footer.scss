@@ -85,6 +85,7 @@
       display: inline-block;
       margin-right: 16px;
       width: 18px;
+      vertical-align: bottom;
 
       path, rect, circle {
         fill: get-color-neutral("darker");
