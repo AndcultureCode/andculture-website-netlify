@@ -6,9 +6,14 @@ import Menu                   from '../../molecules/Menu';
 import LogoMarkSVG            from '../../atoms/LogoMarkSVG';
 import { CSSTransitionGroup } from 'react-transition-group';
 
-const MainHeaderText = ({key, children}) => (
+const MainHeaderText = ({key, headerLine1, headerLine2, headerLine3, subtleText}) => (
   <div className="header-text" key={key}>
-    {children}
+    <h1>
+      <div className="header-text-main">{headerLine1}</div>
+      <div className="header-text-main">{headerLine2}</div>
+      <div className="header-text-main">{headerLine3}</div>
+    </h1>
+    <label className="c-home-header__scroll header-text-subtle">{subtleText}</label>
   </div>
 )
 
@@ -27,29 +32,34 @@ const HomeHeader = () => {
   }
 
   const headerLines = {
-    "default": (
-      <MainHeaderText key="default">
-          <h1>a<span className="fade">ndculture</span><br />design<br />company</h1>
-          <label className="c-home-header__scroll">Take a stroll, then scroll</label>
-      </MainHeaderText>
+    default: (
+      <MainHeaderText
+        key="default"
+        headerLine1={<>a<span className="fade">ndculture</span></>}
+        headerLine2="design"
+        headerLine3="company"
+        subtleText="Take a stroll, then scroll" />
     ),
-    "about": (
-      <MainHeaderText key="about">
-        <h1>process can<br />be a dirty word</h1>
-        <label className="c-home-header__scroll">learn more about the andculture way</label>
-      </MainHeaderText>
+    about: (
+      <MainHeaderText
+        key="about"
+        headerLine1="process can"
+        headerLine2="be a dirty word"
+        subtleText="learn more about the andculture way" />
     ),
-    "blog": (
-      <MainHeaderText key="blog">
-        <h1>look into our<br />world</h1>
-        <label className="c-home-header__scroll">check out our musings in the blog</label>
-      </MainHeaderText>
+    blog: (
+      <MainHeaderText
+        key="blog"
+        headerLine1="look into our"
+        headerLine2="world"
+        subtleText="check out our musings in the blog" />
     ),
-    "work": (
-      <MainHeaderText key="work">
-        <h1>we make it look<br />like magic</h1>
-        <label className="c-home-header__scroll">learn more about who we help &amp; how</label>
-      </MainHeaderText>
+    work: (
+      <MainHeaderText
+        key="blog"
+        headerLine1="we make it look"
+        headerLine2="like magic"
+        subtleText="learn more about who we help &amp; how" />
     ),
   };
 
@@ -60,9 +70,9 @@ const HomeHeader = () => {
       {/* <SquiggleLine /> */}
       <aside className="c-home-header__content">
         <CSSTransitionGroup
-          transitionName="header-text"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={1000}>
+          transitionName="header-text-main"
+          transitionEnterTimeout={200}
+          transitionLeaveTimeout={300}>
           { headerLines[activeIcon] || headerLines.default }
         </CSSTransitionGroup>
         {/* <Menu /> */}

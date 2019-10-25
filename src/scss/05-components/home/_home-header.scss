@@ -47,23 +47,31 @@
     .header-text {
       position: absolute;
 
-      &-enter {
-        opacity: 0.01;
+      &-main {
+        overflow: hidden;
+        height: 90px;
+        margin-top: 0;
+        margin-bottom: 0;
+
+        &-enter {
+          opacity: 0.01;
+        }
+
+        &-enter-active {
+          opacity: 1;
+          transition: opacity 300ms ease-in;
+        }
+
+        &-leave {
+          opacity: 1;
+        }
+
+        &-leave-active {
+          opacity: 0.01;
+          transition: opacity 200ms ease-in;
+        }
       }
 
-      &-enter-active {
-        opacity: 1;
-        transition: opacity 300ms ease-in;
-      }
-
-      &-leave {
-        opacity: 1;
-      }
-
-      &-leave-active {
-        opacity: 0.01;
-        transition: opacity 200ms ease-in;
-      }
     }
   }
 
