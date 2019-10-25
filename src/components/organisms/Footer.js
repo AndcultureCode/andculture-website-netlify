@@ -31,14 +31,9 @@ const Footer = () => (
 
 const SocialLinks = () => (
   <div className="c-footer__social">
-    <a href="https://www.instagram.com/andculture/" target="_blank" className="c-footer__social__link">
+    <a href="https://dribbble.com/andculture" target="_blank" className="c-footer__social__link">
       <SocialIcon
-        type      = "instagram"
-        className = "c-social-icon" />
-    </a>
-    <a href="https://www.linkedin.com/company/andculture/" target="_blank" className="c-footer__social__link">
-      <SocialIcon
-        type      = "linkedin"
+        type      = "dribbble"
         className = "c-social-icon" />
     </a>
     <a href="https://twitter.com/andculture" target="_blank" className="c-footer__social__link">
@@ -46,9 +41,19 @@ const SocialLinks = () => (
         type      = "twitter"
         className = "c-social-icon" />
     </a>
-    <a href="https://dribbble.com/andculture" target="_blank" className="c-footer__social__link">
+    <a href="https://www.instagram.com/andculture/" target="_blank" className="c-footer__social__link">
       <SocialIcon
-        type      = "dribbble"
+        type      = "instagram"
+        className = "c-social-icon" />
+    </a>
+    {/* <a href="https://www.facebook.com/andculture" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "facebook"
+        className = "c-social-icon" />
+    </a> */}
+    <a href="https://www.linkedin.com/company/andculture/" target="_blank" className="c-footer__social__link">
+      <SocialIcon
+        type      = "linkedin"
         className = "c-social-icon" />
     </a>
   </div>
