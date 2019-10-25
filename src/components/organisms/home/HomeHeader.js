@@ -52,7 +52,7 @@ const HomeHeader = () => {
     ),
     work: (
       <MainHeaderText
-        key        = "blog"
+        key        = "work"
         headerText = {[ "we make it look", "like magic" ]}
         subtleText = "learn more about who we help &amp; how" />
     ),

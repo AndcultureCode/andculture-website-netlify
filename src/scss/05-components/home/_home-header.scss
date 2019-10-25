@@ -55,11 +55,13 @@
 
         &-enter {
           opacity: 0.01;
+          padding-top: 90px;
         }
 
         &-enter-active {
+          padding-top: 0;
           opacity: 1;
-          transition: opacity 300ms ease-in;
+          transition: padding-top 300ms ease-in, opacity 300ms ease-out;
         }
 
         &-leave {
@@ -68,10 +70,33 @@
 
         &-leave-active {
           opacity: 0.01;
-          transition: opacity 200ms ease-in;
+          transition: opacity 200ms ease-out;
         }
       }
 
+      &-subtle {
+        // overflow: hidden;
+        height: 38px;
+        margin-top: 124px;;
+
+        &-enter {
+          opacity: 0.01;
+        }
+
+        &-enter-active {
+          opacity: 1;
+          transition: opacity 1000ms ease-out;
+        }
+
+        &-leave {
+          opacity: 1;
+        }
+
+        &-leave-active {
+          opacity: 0.01;
+          transition: opacity 200ms ease-out;
+        }
+      }
     }
   }
 
