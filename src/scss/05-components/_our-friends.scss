@@ -17,5 +17,22 @@
         );
       text-transform: uppercase;
     }
+
+    &__logos-container {
+      margin-top: 75px;
+      display: table;
+      width: 100%;
+
+      &__logo {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        width: 20%;
+
+        img {
+          vertical-align: middle;
+        }
+      }
+    }
   }
 }
