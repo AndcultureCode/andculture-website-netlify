@@ -20,13 +20,13 @@ const HomeCollage = ({ activeVideo }) => (
   <div className="c-home-collage">
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "default"} url="/video/default.mp4" />
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "about"} url="/video/about.mp4" />
-    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "aboutOut"} url="/video/default.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "aboutOut"} url="/video/aboutOut.mp4" />
     {/* <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "blog"} url="/video/blog.mp4" />
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "blogOut"} url="/video/default.mp4" /> */}
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contact"} url="/video/contact.mp4" />
-    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contactOut"} url="/video/default.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contactOut"} url="/video/contactOut.mp4" />
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "work"} url="/video/work.mp4" />
-    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "workOut"} url="/video/default.mp4" />
+    <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "workOut"} url="/video/workOut.mp4" />
     {/* <img src={LongBrushImage} alt="Yellow Long Brush Stroke" className="c-home-collage__longbrush" />
     <img src={AngleBrushImage} alt="Angle Brush Stroke" className="c-home-collage__anglebrush" />
     <img src={DropsImage} alt="Drops" className="c-home-collage__drops" />
