@@ -7,13 +7,13 @@ import CenterLaneScribbles from "../../../img/about-center-lane_scribbles@2x.png
 import StickyNoteBrushSquares from "../../../img/about-sticky-note_brush-squares@2x.png";
 
 const DepartmentList = () => (
-  <div className="c-about-department-list">
+  <div className="c-about-department-list" id="about">
     <h2>how do you do what you do?</h2>
     <div className="c-about-department-list__item">
       <img src={GeometricBlock} className="c-about-department-list__geometric-block" />
       <DepartmentBlock
         name    = { "Strategy" }
-        items   = { ["Discovery and Research", "Data analysis", "Content and Marketing"] }
+        items   = { ["Discovery and research", "Data analysis", "Content and marketing"] }
         content = { "“Why?” That’s what our Strategy team intends to find out, right from Discovery on through site and content development. We dig deep to get to the “Why?” behind your team’s stated problem. We don’t assume an answer. But we’re ready to use data and expertise to explore solutions." } />
     </div>
     <div className="c-about-department-list__item">

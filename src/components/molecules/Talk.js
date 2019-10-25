@@ -3,7 +3,7 @@ import PropTypes  from 'prop-types';
 import LinkButton from '../atoms/LinkButton';
 
 const Talk = ({ message }) => (
-  <div className="c-talk">
+  <div className="c-talk" id="contact">
     <div className="c-talk__wrapper">
       <p className="c-talk__wrapper__content">
         { message }

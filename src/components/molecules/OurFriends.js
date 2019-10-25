@@ -24,7 +24,7 @@ import HybridLearningInstituteLogo2x  from '../../img/clients/client_hybrid-lear
 const logoDivClass = "c-our-friends__wrapper__logos-container__logo";
 
 const OurFriends = () => (
-  <div className="c-our-friends">
+  <div className="c-our-friends" id="work">
     <div className="c-our-friends__wrapper">
       <Paragraph cssClassName="c-our-friends__wrapper__label">Some of our other friends</Paragraph>
       <div className="c-our-friends__wrapper__logos-container">
