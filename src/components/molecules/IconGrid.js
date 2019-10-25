@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types'
-import React from 'react'
-import Icon  from '../atoms/Icon';
-import Menu  from './Menu';
+import PropTypes  from 'prop-types'
+import React      from 'react'
+import Icon       from '../atoms/Icon';
+import Menu       from './Menu';
+import { Link }   from 'react-scroll';
 
 const IconGrid = ({onHover}) => (
   <div className="c-icon-grid">
@@ -90,7 +91,7 @@ const IconGrid = ({onHover}) => (
       <IconSelection
         name    = "square-washer work"
         type    = "work"
-        label   = "The Work"
+        label   = "Clients"
         onHover = {onHover} />
       <IconBlock name="eye" />
       <IconBlock name="square-washer" />
@@ -136,10 +137,10 @@ const IconLink = ({name}) => (
 );
 
 const IconSelection = ({name, type, label, onHover}) => (
-  <a href="#" title={label} className={`c-icon-grid__selection ${type}`} onMouseEnter={(e) => onHover(e, type)} onMouseLeave={(e) => onHover(e, type)}>
+  <Link href={`#${type}`} title={label} className={`c-icon-grid__selection ${type}`} onMouseEnter={(e) => onHover(e, type)} onMouseLeave={(e) => onHover(e, type)} to={type} smooth={true} duration={750}>
     <Icon name={name} />
     <label className="c-icon-grid__selection__label">{label}</label>
-  </a>
+  </Link>
 )
 
 IconGrid.propTypes = {

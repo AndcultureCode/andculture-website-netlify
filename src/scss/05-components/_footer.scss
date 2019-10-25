@@ -4,7 +4,7 @@
   padding-top: 60px;
 
   p, a {
-    color: get-color-neutral("medium");
+    color: get-color-neutral("darker");
     font-size: 12px;
     text-decoration: none;
   }
@@ -83,11 +83,12 @@
 
     &__link {
       display: inline-block;
-      margin-left: 10px;
+      margin-right: 16px;
       width: 18px;
+      vertical-align: bottom;
 
       path, rect, circle {
-        fill: get-color-neutral("medium");
+        fill: get-color-neutral("darker");
       }
     }
   }

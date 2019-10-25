@@ -27,7 +27,7 @@ export const IndexPageTemplate = ({
           meetings and wondering what we’ll come up with next." /> */}
       <DepartmentList />
       <OurFriends/>
-      <Talk message="We’re looking for partners who are tired of what’s been done and want the not even yet imagined." />
+      <Talk message="We’re looking for partners who are tired of what’s been done and want the not-even-yet-imagined." />
 
     {/* <div
       className="full-width-image margin-top-0"
