@@ -10,12 +10,30 @@
     &__label {
       @include font-style(
           $font-normal,                // Font Family
-          16px,                        // Font Size
+          21px,                        // Font Size
           get-color-primary("fresh"),  // Font Color
           600,                         // Font Weight
-          46px                         // Line Height
+          42px                         // Line Height
         );
+      text-align: center;
       text-transform: uppercase;
+    }
+
+    &__logos-container {
+      margin-top: 75px;
+      display: table;
+      width: 100%;
+
+      &__logo {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        width: 20%;
+
+        img {
+          vertical-align: middle;
+        }
+      }
     }
   }
 }

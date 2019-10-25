@@ -4,7 +4,7 @@
   padding-top: 60px;
 
   p, a {
-    color: get-color-primary("after-hours");
+    color: get-color-neutral("darker");
     font-size: 12px;
     text-decoration: none;
   }
@@ -26,7 +26,7 @@
   }
 
   &__logo {
-    @include grid-column(3);
+    @include grid-column(12);
 
     @include respond-to("tablet") {
       @include grid-column(6);
@@ -39,7 +39,7 @@
   }
 
   &__info {
-    @include grid-column(9);
+    @include grid-column(12);
     padding-top: 14px;
 
     @include respond-to("tablet") {
@@ -48,7 +48,7 @@
 
     &__details {
       display: inline-block;
-      width: 75%;
+      width: 50%;
 
       @include respond-to("tablet") {
         display: block;
@@ -78,16 +78,16 @@
   }
 
   &__social {
-    float: right;
-    padding-right: 50px;
+    display: inline-block;
+    width: 25%;
 
     &__link {
       display: inline-block;
-      margin-left: 5px;
+      margin-left: 10px;
       width: 18px;
 
       path, rect, circle {
-        fill: get-color-primary("fresh");
+        fill: get-color-neutral("darker");
       }
     }
   }
