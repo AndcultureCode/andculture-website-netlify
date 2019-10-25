@@ -9,12 +9,13 @@
 
     &__label {
       @include font-style(
-          $font-normal,                // Font Family
+          $font-narrow,                // Font Family
           21px,                        // Font Size
           get-color-primary("fresh"),  // Font Color
           600,                         // Font Weight
           42px                         // Line Height
         );
+      letter-spacing: 1.2px;
       text-align: center;
       text-transform: uppercase;
     }

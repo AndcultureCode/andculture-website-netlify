@@ -7,19 +7,6 @@ import { Link }   from 'react-scroll';
 const IconGrid = ({onHover}) => (
   <div className="c-icon-grid">
     <IconGridColumn>
-      <IconBlock name="empty" />
-      <IconBlock name="empty" />
-      <IconBlock name="circle" />
-      <IconBlock name="plus" />
-      <IconBlock name="empty" />
-      <IconBlock name="empty" />
-      <IconBlock name="empty" />
-      <IconBlock name="triangle" />
-      <IconBlock name="empty" />
-      <IconBlock name="empty" />
-      <IconBlock name="empty" />
-    </IconGridColumn>
-    <IconGridColumn>
       <IconBlock name="bolt" />
       <IconBlock name="plus" />
       <IconBlock name="square-washer" />

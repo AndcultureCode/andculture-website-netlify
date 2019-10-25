@@ -41,20 +41,17 @@ const HomeHeader = () => {
     about: (
       <MainHeaderText
         key        = "about"
-        headerText = {[ "process can", "be a dirty word" ]}
-        subtleText = "learn more about the andculture way" />
+        headerText = {[ "process can", "be a dirty word" ]} />
     ),
     blog: (
       <MainHeaderText
         key        = "blog"
-        headerText = {[ "look into our", "world" ]}
-        subtleText = "check out our musings in the blog" />
+        headerText = {[ "look into our", "world" ]} />
     ),
     work: (
       <MainHeaderText
         key        = "blog"
-        headerText = {[ "we make it look", "like magic" ]}
-        subtleText = "learn more about who we help &amp; how" />
+        headerText = {[ "we make it look", "like magic" ]} />
     ),
   };
 

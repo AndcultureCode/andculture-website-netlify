@@ -1,5 +1,5 @@
 import React        from 'react'
-import Logo         from "../../img/logo.svg"
+import Logo         from "../../img/wordmark.svg"
 import { Link }     from 'gatsby';
 import MobileBreak  from '../atoms/MobileBreak';
 import SocialIcon   from '../atoms/SocialIcon';
