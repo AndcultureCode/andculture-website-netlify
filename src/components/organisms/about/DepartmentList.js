@@ -5,10 +5,11 @@ import AndFreshCircle from "../../../img/home-collage_fresh_brush@2x.png";
 import VioletStrokedSquare from "../../../img/about-violet_stroked square@2x.png";
 import CenterLaneScribbles from "../../../img/about-center-lane_scribbles@2x.png";
 import StickyNoteBrushSquares from "../../../img/about-sticky-note_brush-squares@2x.png";
-
+import HomeSubHeader from '../../../components/organisms/home/HomeSubHeading';
 const DepartmentList = () => (
-  <div className="c-about-department-list" id="about">
-    <h2>how do you do what you do?</h2>
+  <div className="c-about-department-list">
+    <HomeSubHeader />
+    {/* <h2>how do you do what you do?</h2> */}
     <div className="c-about-department-list__item">
       <img src={GeometricBlock} className="c-about-department-list__geometric-block" />
       <DepartmentBlock

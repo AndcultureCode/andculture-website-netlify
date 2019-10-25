@@ -1,3 +1,55 @@
+.we-pursue-forward-thinking-par {
+
+      font-family: "DIN 2014";
+      line-height: 55px;
+      text-align: center;
+      position: relative;
+       h2 {
+        color: #6E848C;
+        font-size: 40px;
+        font-weight: 300;
+        letter-spacing: 8px;
+       }
+    }
+    .when-you-come-to-us-you-ve {
+      height: 110px;
+
+      font-family: "DIN 2014";
+      position: relative;
+      p {
+        color: #57666A;
+        font-weight: 100;
+        line-height: 30px;
+        font-size: 24px;
+        letter-spacing: 2px;
+        width: 28vw;
+      }
+    }
+
+    .subHeading {
+      margin-top: 50px;
+      margin-bottom: 450px;
+    }
+
+    .flexParent {
+      display: flex;
+    align-items: center;
+    width:66vw;
+    margin-left: -70px;
+         > div{
+      flex: 1;
+       }
+    }
+  //   .left {
+
+  //     text-align: left;
+  // }
+
+  // .right {
+
+  //     text-align: right;
+  // }
+
 .c-about-department-list {
   margin:    0px auto 118px auto;
   max-width: 1180px;    // inherit from site body?
@@ -17,7 +69,7 @@
     &:first-of-type {
       margin-top: 0;
     }
-    
+
   }
   &__geometric-block {
     position: absolute;

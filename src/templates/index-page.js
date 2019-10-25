@@ -9,6 +9,7 @@ import HomeHeader           from '../components/organisms/home/HomeHeader';
 import HomeBlockList        from '../components/organisms/home/HomeBlockList';
 import OurFriends           from '../components/molecules/OurFriends';
 
+
 export const IndexPageTemplate = ({
   image,
   title,
