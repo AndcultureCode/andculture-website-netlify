@@ -53,7 +53,7 @@ const TwitterPath = () => (
 
 SocialIcon.propTypes = {
   cssClass: PropTypes.string,
-  type:     PropTypes.oneOf(['dribbble', 'instagram', 'linkedin', 'twitter'])
+  type:     PropTypes.oneOf(['dribbble', 'facebook', 'instagram', 'linkedin', 'twitter'])
 };
 
 export default SocialIcon;
