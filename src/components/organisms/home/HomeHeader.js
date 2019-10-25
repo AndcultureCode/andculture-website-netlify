@@ -50,7 +50,7 @@ const HomeHeader = () => {
     ),
     work: (
       <MainHeaderText
-        key        = "blog"
+        key        = "work"
         headerText = {[ "we make it look", "like magic" ]} />
     ),
   };
