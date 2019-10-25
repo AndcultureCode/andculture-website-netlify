@@ -21,10 +21,10 @@ const Footer = () => (
         <a href="tel:7172331881">717.233.2881</a><FooterDivider />
         <a href="https://goo.gl/maps/5uFiTwZvMEnzR4mr9" target="_blank">614 n. front street, <MobileBreak />harrisburg, pa 17101</a>
       </p>
+      <SocialLinks />
       <p className="c-footer__info__copyright">
         &copy; andculture. all rights reserved.
       </p>
-      <SocialLinks />
     </div>
   </footer>
 );
