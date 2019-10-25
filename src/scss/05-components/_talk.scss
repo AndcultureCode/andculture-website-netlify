@@ -22,10 +22,10 @@
 
       @include font-style(
         $font-normal,              // Font Family
-        30px,                      // Font Size
+        27px,                      // Font Size
         get-color-primary("fog"),  // Font Color
         300,                       // Font Weight
-        48px                       // Line Height
+        43px                       // Line Height
       );
 
       letter-spacing: 2px;
