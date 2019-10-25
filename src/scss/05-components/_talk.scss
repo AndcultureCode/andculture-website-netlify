@@ -18,7 +18,8 @@
     }
 
     &__content {
-      @include grid-column(6);
+      @include grid-column(5);
+      @include grid-push(1);
 
       @include font-style(
         $font-normal,              // Font Family
@@ -30,8 +31,10 @@
 
       letter-spacing: 2px;
 
-      @include respond-to("tablet") {
-        @include grid-column(12);
+      @include respond-to("sm-desktop") {
+        @include grid-column(10);
+        @include grid-push(1);
+        text-align: center;
       }
     }
 
@@ -41,10 +44,11 @@
       margin-right: 50px;
       text-align: center;
 
-      @include respond-to("tablet") {
-        @include grid-column(12);
+      @include respond-to("sm-desktop") {
+        @include grid-column(10);
+        @include grid-push(1);
         margin-top: 50px;
-        text-align: left;
+        text-align: center;
       }
 
       .c-link-button {

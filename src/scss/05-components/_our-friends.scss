@@ -2,10 +2,18 @@
   background-color: get-color-primary("fog");
   padding: 85px 0 130px 0;
 
+  @include respond-to("sm-laptop") {
+    padding-top: 65px;
+    padding-bottom: 110px;
+  }
 
   &__wrapper {
-    max-width: 1180px;
-    margin: 0 auto;
+    @include site-container;
+
+    @include respond-to("tablet") {
+      margin-left: 40px;
+      width: calc(100% - 80px);
+    }
 
     &__label {
       @include font-style(

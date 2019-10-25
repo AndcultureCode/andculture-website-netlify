@@ -1,14 +1,20 @@
 .c-about-department-list {
-  margin:    0px auto 118px auto;
-  max-width: 1180px;    // inherit from site body?
+  @include site-container;
+
   h2 {
     margin-bottom: 82px;
     font-weight: 300;
     text-align: center;
   }
   &__intro {
+    @include grid-column(10);
+    @include grid-push(1);
     margin-top: 50px;
     margin-bottom: 200px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
 
     &__header {
       font-family: $font-normal;
@@ -26,6 +32,14 @@
         );
         letter-spacing: 2px;
         margin-bottom: 140px;
+
+        @include respond-to("sm-laptop") {
+          margin-bottom: 80px;
+        }
+
+        @include respond-to("tablet") {
+          margin-bottom: 60px;
+        }
        }
     }
 
@@ -40,6 +54,14 @@
         width: 45%;
         vertical-align: top;
 
+        @include respond-to("tablet") {
+          width: 100%;
+
+          &:first-child {
+            margin-bottom: 40px;
+          }
+        }
+
         &:first-child {
           margin-right: 8%;
         }
@@ -52,12 +74,13 @@
             100,                         // Font Weight
             30px                         // Line Height
           );
-          letter-spacing: 1.5px;
+          letter-spacing: 1.2px;
         }
       }
     }
   }
   &__item {
+    @include grid-column(12);
     display:  flex;
     margin:   0 24px;
     position: relative;
@@ -108,4 +131,8 @@
 
 .c-home-header + .c-about-department-list {
   margin-top: 100px;
+
+  @include respond-to("sm-laptop") {
+    margin-top: 60px;
+  }
 }

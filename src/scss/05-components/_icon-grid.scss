@@ -11,6 +11,12 @@
   &__column {
     display: inline-block;
     vertical-align: top;
+
+    @include respond-to("sm-desktop") {
+      &:first-child {
+        display: none;
+      }
+    }
   }
 
   &__link,

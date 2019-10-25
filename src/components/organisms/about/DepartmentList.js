@@ -7,7 +7,7 @@ import CenterLaneScribbles from "../../../img/about-center-lane_scribbles@2x.png
 import StickyNoteBrushSquares from "../../../img/about-sticky-note_brush-squares@2x.png";
 import HomeSubHeader from '../../../components/organisms/home/HomeSubHeading';
 const DepartmentList = () => (
-  <div className="c-about-department-list">
+  <div className="c-about-department-list" id="about">
     <HomeSubHeader />
     {/* <h2>how do you do what you do?</h2> */}
     <div className="c-about-department-list__item">
