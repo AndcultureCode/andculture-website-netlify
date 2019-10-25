@@ -4,7 +4,7 @@
   padding-top: 60px;
 
   p, a {
-    color: get-color-neutral("medium");
+    color: get-color-neutral("darker");
     font-size: 12px;
     text-decoration: none;
   }
@@ -87,7 +87,7 @@
       width: 18px;
 
       path, rect, circle {
-        fill: get-color-neutral("medium");
+        fill: get-color-neutral("darker");
       }
     }
   }
