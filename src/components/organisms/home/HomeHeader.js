@@ -29,7 +29,7 @@ const HomeHeader = () => {
   const onHover = (eventType, type, delayed) => {
     const currentTime = new Date().getTime();
 
-    if (lastUpdate > (currentTime - delay)) {
+    if (lastUpdate > (currentTime - delay) && eventType === "mouseleave") {
       if (delayTimer != null) {
         clearTimeout(delayTimer);
       }
@@ -38,16 +38,19 @@ const HomeHeader = () => {
     }
 
     setLastUpdate(currentTime);
+    if (delayTimer != null) {
+      clearTimeout(delayTimer);
+    }
     setDelayTimer(null);
 
     if (eventType === "mouseleave") {
       setActiveIcon(null);
-      setActiveVideo(`${type}Out`);
+      // setActiveVideo(`${type}Out`);
       return;
     }
 
     setActiveIcon(type);
-    setActiveVideo(type);
+    // setActiveVideo(type);
   }
 
   const handleOnHover = (e, type) => {
