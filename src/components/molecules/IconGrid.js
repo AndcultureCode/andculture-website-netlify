@@ -3,6 +3,7 @@ import React      from 'react'
 import Icon       from '../atoms/Icon';
 import Menu       from './Menu';
 import { Link }   from 'react-scroll';
+import RubberBand from 'react-reveal/RubberBand';
 
 const IconGrid = ({onHover}) => (
   <div className="c-icon-grid">
@@ -18,7 +19,7 @@ const IconGrid = ({onHover}) => (
       <IconBlock name="empty" />
       <IconBlock name="empty" />
       <IconBlock name="empty" />
-      <p class="c-icon-grid__easteregg"><span>*</span>psst...new site coming soon</p>
+      <RubberBand><p className="c-icon-grid__easteregg"><span>*</span>psst...new site coming soon</p></RubberBand>
     </IconGridColumn>
     <IconGridColumn>
       <IconBlock name="triangle" />
