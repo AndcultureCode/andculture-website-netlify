@@ -43,8 +43,6 @@ const OurFriends = () => (
         <div className={logoDivClass}>
           <img src={CaptricityLogo} srcSet={`${CaptricityLogo} 1x, ${CaptricityLogo2x} 2x`} alt="Captricity"/>
         </div>
-      </div>
-      <div className="c-our-friends__wrapper__logos-container">
         <div className={logoDivClass}>
           <img src={PennStateLogo} srcSet={`${PennStateLogo} 1x, ${PennStateLogo2x} 2x`} alt="PennState"/>
         </div>

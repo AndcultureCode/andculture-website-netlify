@@ -30,17 +30,44 @@
 
     &__logos-container {
       margin-top: 75px;
-      display: table;
       width: 100%;
 
       &__logo {
-        display: table-cell;
+        display: inline-block;
         vertical-align: middle;
         text-align: center;
         width: 20%;
 
         img {
           vertical-align: middle;
+        }
+
+        &:nth-child(n+6) {
+          margin-top: 75px;
+        }
+
+        @include respond-to("laptop") {
+          width: 25%;
+
+          &:nth-child(n+5) {
+            margin-top: 75px;
+          }
+        }
+
+        @include respond-to("tablet") {
+          width: 33%;
+
+          &:nth-child(n+4) {
+            margin-top: 75px;
+          }
+        }
+
+        @include respond-to("phone") {
+          width: 50%;
+
+          &:nth-child(n+3) {
+            margin-top: 75px;
+          }
         }
       }
     }
