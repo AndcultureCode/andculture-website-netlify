@@ -24,7 +24,7 @@ const HomeHeader = () => {
   const [ activeVideo, setActiveVideo ] = useState("default");
   const [ lastUpdate, setLastUpdate ] = useState(null);
   const [ delayTimer, setDelayTimer ] = useState(null);
-  const delay = 2000;
+  const delay = 3000;
 
   const onHover = (eventType, type, delayed) => {
     const currentTime = new Date().getTime();
