@@ -43,15 +43,15 @@ const HomeHeader = () => {
         key        = "about"
         headerText = {[ "process can", "be a dirty word" ]} />
     ),
-    blog: (
+    contact: (
       <MainHeaderText
-        key        = "blog"
-        headerText = {[ "look into our", "world" ]} />
+        key        = "contact"
+        headerText = {[ "yes, we'd love", "to talk" ]} />
     ),
     work: (
       <MainHeaderText
         key        = "work"
-        headerText = {[ "we make it look", "like magic" ]} />
+        headerText = {[ "how we make it", "look like magic" ]} />
     ),
   };
 
