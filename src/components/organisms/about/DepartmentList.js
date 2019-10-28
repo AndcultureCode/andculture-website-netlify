@@ -6,8 +6,8 @@ import X                        from "../../../img/about-x.png";
 import X2x                      from "../../../img/about-x@2x.png";
 import SixDots                  from "../../../img/about-six_dots.png";
 import SixDots2x                from "../../../img/about-six_dots@2x.png";
-import FogDot                   from "../../../img/about-fog_dot-pattern.png";
-import FogDot2x                 from "../../../img/about-fog_dot-pattern@2x.png";
+import TealDots                 from "../../../img/about-teal_dots.png";
+import TealDots2x               from "../../../img/about-teal_dots@2x.png";
 import GeometricBlock           from "../../../img/about-red_diamond.png";
 import GeometricBlock2x         from "../../../img/about-red_diamond@2x.png";
 import StickyNoteBrushSquares   from "../../../img/about-sticky-note_brush-squares.png";
@@ -43,7 +43,7 @@ const DepartmentList = () => (
       {/* <h2>how do you do what you do?</h2> */}
       <div className="c-about-department-list__item">
         <DepartmentBlock
-            name    = { "Strategy" }
+            name    = { ["Stra", "tegy"] }
             id      = { "about-strategy" }
             items   = { ["discovery and research", "data analysis", "content and marketing"] }
             content = { "“Why?” That’s what our Strategy team intends to find out, right from Discovery on through site and content development. We dig deep to get to the “Why?” behind your team’s stated problem. We don’t assume an answer. But we’re ready to use data and expertise to explore solutions." }
@@ -52,12 +52,12 @@ const DepartmentList = () => (
           <img src = {BlueSwoosh} srcSet={`${BlueSwoosh} 1x, ${BlueSwoosh2x} 2x`} className = "c-about-department-list__image -swoosh" alt="" />
           <img src = {X} srcSet={`${X} 1x, ${X2x} 2x`} className = "c-about-department-list__image -x" alt="" />
           <img src = {SixDots} srcSet={`${SixDots} 1x, ${SixDots2x} 2x`} className = "c-about-department-list__image -six-dots" alt="" />
-          <img src = {FogDot} srcSet={`${FogDot} 1x, ${FogDot2x} 2x`} className = "c-about-department-list__image -fog-dot" alt="" />
+          <img src = {TealDots} srcSet={`${TealDots} 1x, ${TealDots2x} 2x`} className = "c-about-department-list__image -teal-dots" alt="" />
         </DepartmentBlock>
       </div>
       <div className="c-about-department-list__item">
         <DepartmentBlock
-            name       = { "Design" }
+            name       = { ["Desi", "gn"] }
             id         = { "about-design" }
             items      = { ["product design", "web design", "event design"] }
             content    = { "From revamping a website to creating the aesthetics for a massive live event from scratch, our design team is up to the challenge. We value pushing each other creatively with a passion that borders on relentless. The result: your brand hits new levels." }
@@ -70,7 +70,7 @@ const DepartmentList = () => (
       </div>
       <div className="c-about-department-list__item">
         <DepartmentBlock
-            name    = { "Engineering" }
+            name    = { ["Engi", "neer", "ing"] }
             id      = { "about-engineering" }
             items   = { ["app development", "software design", "client-side application"] }
             content = { "Using Agile as our base, we work collaboratively with you to think beyond the obvious and deliver design thinking — it’s what has helped us come up with entirely new platforms out of thin air. You’re working with developers who live for this every day." }>
@@ -83,11 +83,11 @@ const DepartmentList = () => (
       </div>
       <div className="c-about-department-list__item">
         <DepartmentBlock
-            name    = { "Engagement" }
-            id      = { "about-engagement" }
-            items   = { ["client advising", "project management", "business development"] }
-            content = { "Organizing and understanding the nuances of a project can seem overwhelming. Our experienced engagement team works alongside you so you’re up to date as much as you want to be, from project updates to advising on your behalf in meetings so that your best interests are always represented in our designs." }
-            isWide  = { true }>
+            name       = { ["Eng", "age", "ment"] }
+            id         = { "about-engagement" }
+            items      = { ["client advising", "project management", "business development"] }
+            content    = { "Organizing and understanding the nuances of a project can seem overwhelming. Our experienced engagement team works alongside you so you’re up to date as much as you want to be, from project updates to advising on your behalf in meetings so that your best interests are always represented in our designs." }
+            alignRight = { true }>
           <img src = {Plant} srcSet={`${Plant} 1x, ${Plant2x} 2x`} className = "c-about-department-list__image -plant" alt="" />
           <img src = {Triangle} srcSet={`${Triangle} 1x, ${Triangle2x} 2x`} className = "c-about-department-list__image -triangle" alt="" />
           <img src = {Rainbow} srcSet={`${Rainbow} 1x, ${Rainbow2x} 2x`} className = "c-about-department-list__image -rainbow" alt="" />

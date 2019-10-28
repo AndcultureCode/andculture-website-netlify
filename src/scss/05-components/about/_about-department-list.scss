@@ -12,7 +12,7 @@
     @include grid-column(10);
     @include grid-push(1);
     margin-top: 50px;
-    margin-bottom: 200px;
+    margin-bottom: 150px;
 
     @include respond-to("tablet") {
       margin-top: 0;
@@ -83,10 +83,11 @@
   }
 
   &__item {
-    @include grid-column(12);
+    @include grid-column(10);
+    @include grid-push(1);
     display:  flex;
-    margin:   200px 24px 0;
     position: relative;
+    margin-top: 200px;
 
     &:nth-of-type(even) {
       flex-direction: row-reverse;
@@ -104,6 +105,21 @@
 
   &__image {
     position: absolute;
+
+    &__static {
+      opacity: 0.1;
+      visibility: hidden;
+    }
+
+    @include respond-to("lg-laptop") {
+      &__animate {
+        visibility: hidden;
+      }
+
+      &__static {
+        visibility: visible;
+      }
+    }
 
     &.-geometric-block {
       height:   140px;
@@ -133,10 +149,10 @@
       z-index: 2;
     }
 
-    &.-fog-dot {
+    &.-teal-dots {
       height: 239px;
-      top: 42px;
-      right: 288px;
+      top: 59px;
+      right: 196px;
       z-index: 1;
     }
 
@@ -206,21 +222,21 @@
     &.-plant {
       height: 128px;
       top: 30px;
-      right: 284px;
+      left: 234px;
       z-index: 5
     }
 
     &.-triangle {
       height: 200px;
       top: -58px;
-      right: 351px;
+      left: 106px;
       z-index: 4;
     }
 
     &.-rainbow {
       height: 226px;
       top: 10px;
-      right: 443px;
+      left: -30px;
       z-index: 3;
     }
   }

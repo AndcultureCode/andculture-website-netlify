@@ -9,6 +9,8 @@
   }
 
   &__easteregg {
+    font-family: $font-narrow;
+    font-weight: 600;
     color: get-color-complimentary("icon");
     font-size: 20px;
     position: absolute;

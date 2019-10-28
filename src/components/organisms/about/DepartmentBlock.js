@@ -10,7 +10,9 @@ const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, 
   let iconTimer = null;
 
   const handleVisibilityChange = (isVisible) => {
-    return;
+    if (!isVisible) {
+      return;
+    }
     setIsVisible(isVisible);
 
     if (iconTimer != null) {
@@ -33,30 +35,25 @@ const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, 
     }
   }
 
-  const sensorOffset = {
-    top: -50
-  };
-
-  if (isWide) {
-    sensorOffset.top = 0;
-  }
-
   return (
     <div
       className = { `c-about-department-list__item__container ${isWide ? "-wide" : ""}` }
       id        = { id }>
       <VizSensor
         partialVisiblity  = { true }
-        scrollDelay       = { 100 }
-        offset            = { sensorOffset }
         onChange          = { handleVisibilityChange } >
         <div>
-          <Fade bottom opposite cascade>
+          <div className="c-about-department-list__image__animate">
+            <Fade bottom opposite cascade when = { isIconsVisible }>
+              {children}
+            </Fade>
+          </div>
+          <div className="c-about-department-list__image__static">
             {children}
-          </Fade>
+          </div>
           <div className={`c-about-department-block ${isShort ? "-short " : ""} ${alignRight ? "-align-right" : ""} ${isWide ? "-wide" : ""}` }>
-            <Fade bottom opposite cascade>
-              <h1>{name}</h1>
+            <Fade bottom opposite cascade when = { isVisible }>
+              <h1>{ name.map((text, key) => (<span key={ key }>{text}<br /></span>)) }</h1>
               <div className="c-about-department-block__container">
                 <div className="c-about-department-block__message">
                   <p>
