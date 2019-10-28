@@ -22,15 +22,35 @@ const MainHeaderText = ({isVisible, headerText, subtleText}) => (
 const HomeHeader = () => {
   const [ activeIcon,  setActiveIcon ]  = useState(null);
   const [ activeVideo, setActiveVideo ] = useState("default");
+  const [ lastUpdate, setLastUpdate ] = useState(null);
+  const delay = 2000;
 
-  const handleOnHover = (e, type) => {
-    if (e.type === "mouseleave") {
+  const onHover = (eventType, type, delayed) => {
+    const currentTime = new Date().getTime();
+
+    if (lastUpdate > (currentTime - delay)) {
+      const ms = lastUpdate - (currentTime - delay);
+      setTimeout(() => onHover(eventType, type, true), ms);
+      setLastUpdate(currentTime + ms);
+      return;
+    }
+
+    if (!delayed) {
+      setLastUpdate(currentTime);
+    }
+
+    if (eventType === "mouseleave") {
       setActiveIcon(null);
       setActiveVideo(`${type}Out`);
       return;
     }
+
     setActiveIcon(type);
     setActiveVideo(type);
+  }
+
+  const handleOnHover = (e, type) => {
+    onHover(e.type, type, false);
   }
 
   return (
