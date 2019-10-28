@@ -118,6 +118,12 @@
       path, rect, circle {
         fill: get-color-neutral("darker");
       }
+
+      &:hover {
+        path, rect, circle {
+          fill: get-color-primary("fresh");
+        }
+      }
     }
   }
 }
