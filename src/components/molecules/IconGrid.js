@@ -80,7 +80,7 @@ const IconGrid = ({onHover}) => (
       <IconSelection
         name    = "square-washer work"
         type    = "work"
-        label   = "Clients"
+        label   = "Partners"
         onHover = {onHover} />
       <IconBlock name="eye" />
       <IconBlock name="square-washer" />

@@ -26,7 +26,7 @@ const logoDivClass = "c-our-friends__wrapper__logos-container__logo";
 const OurFriends = () => (
   <div className="c-our-friends" id="work">
     <div className="c-our-friends__wrapper">
-      <Paragraph cssClassName="c-our-friends__wrapper__label">Some of our other friends</Paragraph>
+      <Paragraph cssClassName="c-our-friends__wrapper__label">Some of our friends</Paragraph>
       <div className="c-our-friends__wrapper__logos-container">
         <div className={logoDivClass}>
           <img src={AdaptivePathLogo} srcSet={`${AdaptivePathLogo} 1x, ${AdaptivePathLogo2x} 2x`} alt="Adaptive Path"/>
