@@ -75,6 +75,10 @@
       width: 25%;
       text-align: right;
 
+      @include respond-to("sm-desktop") {
+        width: auto;
+      }
+
       @include respond-to("tablet") {
         display: block;
         opacity: 0.5;
@@ -97,6 +101,11 @@
       margin-right: 16px;
       width: 18px;
       vertical-align: bottom;
+
+      svg {
+        margin-bottom: 2px;
+        vertical-align: bottom;
+      }
 
       @include respond-to("sm-desktop") {
         margin-right: 10px;
