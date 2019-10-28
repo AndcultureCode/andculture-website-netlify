@@ -1,11 +1,13 @@
 .c-about-department-list {
   @include site-container;
+  margin-bottom: 120px;
 
   h2 {
     margin-bottom: 82px;
     font-weight: 300;
     text-align: center;
   }
+
   &__intro {
     @include grid-column(10);
     @include grid-push(1);
@@ -79,13 +81,14 @@
       }
     }
   }
+
   &__item {
     @include grid-column(12);
     display:  flex;
-    margin:   0 24px;
+    margin:   200px 24px 0;
     position: relative;
+
     &:nth-of-type(even) {
-      margin-top: -150px;
       flex-direction: row-reverse;
     }
     &:first-of-type {
@@ -93,39 +96,128 @@
     }
 
   }
-  &__geometric-block {
+
+  &__image {
     position: absolute;
-    top:      232px;
-    left:     500px;
-  }
-  &__fresh-circle {
-    float:        left;
-    margin-right: 49px;
-    top:          0;
-    left:         0;
-    width:        207px;
-    height:       250px;
-  }
-  &__violet-square {
-    position: absolute;
-    top:      118px;
-    left:     134px;
-    z-index:  1;
-  }
-  &__brush-squares {
-    position: absolute;
-    top:      163px;
-    right:    -66px;
-    height:   226px;
-    width:    254px;
-  }
-  &__scribbles {
-    position: absolute;
-    top:      240px;
-    right:    100px;
-    height:   174px;
-    width:    164px;
-    z-index:  1;
+
+    &.-geometric-block {
+      height:   140px;
+      top:      232px;
+      right:    180px;
+      z-index:  5;
+    }
+
+    &.-swoosh {
+      height: 339px;
+      top: -104px;
+      right: 50px;
+      z-index: 4;
+    }
+
+    &.-x {
+      height: 111px;
+      top: 113px;
+      right: 86px;
+      z-index: 3;
+    }
+
+    &.-six-dots {
+      height: 86px;
+      top: 41px;
+      right: 87px;
+      z-index: 2;
+    }
+
+    &.-fog-dot {
+      height: 239px;
+      top: 42px;
+      right: 288px;
+      z-index: 1;
+    }
+
+    &.-go {
+      height: 112px;
+      top: 0;
+      left: 48px;
+      z-index: 5
+    }
+
+    &.-squiggle {
+      height: 330px;
+      top: 29px;
+      left: 0;
+      z-index: 4;
+    }
+
+    &.-align-lines {
+      height: 101px;
+      top: -16px;
+      left: 220px;
+      z-index: 3;
+    }
+
+    &.-doodle-dots {
+      height: 254px;
+      top: -125px;
+      right: -262px;
+      z-index: 2;
+    }
+
+    &.-brush-squares {
+      height: 165px;
+      top: 90px;
+      right: -40px;
+      z-index: 5;
+    }
+
+    &.-dab-dots {
+      height: 104px;
+      top: 156px;
+      right: 108px;
+      z-index: 4;
+    }
+
+    &.-asterisk {
+      height: 126px;
+      top: 43px;
+      right: 167px;
+      z-index: 2;
+    }
+
+    &.-red-blob {
+      height: 174px;
+      top: 175px;
+      right: 153px;
+      z-index: 3;
+    }
+
+    &.-bendy-lines {
+      height: 759px;
+      top: -356px;
+      right: -116px;
+      z-index: 1;
+    }
+
+    &.-plant {
+      height: 128px;
+      top: 30px;
+      right: 284px;
+      z-index: 5
+    }
+
+    &.-triangle {
+      height: 200px;
+      top: -58px;
+      right: 351px;
+      z-index: 4;
+    }
+
+    &.-rainbow {
+      height: 226px;
+      top: 10px;
+      right: 443px;
+      z-index: 3;
+    }
   }
 }
 

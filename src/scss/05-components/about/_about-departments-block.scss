@@ -4,8 +4,21 @@
   padding-left: 174px;
   position: relative;
   clear: both;
+  z-index: 6;
   &.-short {
     padding-top: 122px;
+  }
+  &.-wide {
+    margin-top: 100px;
+    padding-left: 0;
+    padding-right: 230px;
+    width: 100%;
+    > div {
+      float: right;
+    }
+    > h1 {
+      left: 100px;
+    }
   }
   &.-align-right {
     padding-left: 0;
