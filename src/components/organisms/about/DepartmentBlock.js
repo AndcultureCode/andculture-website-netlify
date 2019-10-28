@@ -2,8 +2,9 @@ import React, { useState }  from "react";
 import Bounce               from "react-reveal/Bounce";
 import Fade                 from "react-reveal/Fade";
 import VizSensor            from 'react-visibility-sensor';
+import { scroller }         from "react-scroll";
 
-const DepartmentBlock = ({ children, name, items, content, isShort, isWide, isScrollDown, alignRight }) => {
+const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, alignRight }) => {
   const [ isVisible, setIsVisible ] = useState(false);
   const [ isIconsVisible, setIsIconsVisible ] = useState(false);
   let iconTimer = null;
@@ -18,6 +19,12 @@ const DepartmentBlock = ({ children, name, items, content, isShort, isWide, isSc
       setIsIconsVisible(isVisible);
     }
     else {
+      // scroller.scrollTo(id, {
+      //   delay: 1500,
+      //   smooth: "easeInOutQuart",
+      //   offset: -200,
+      // });
+
       iconTimer = setTimeout(() => {
         setIsIconsVisible(isVisible);
         iconTimer = null;
@@ -25,18 +32,29 @@ const DepartmentBlock = ({ children, name, items, content, isShort, isWide, isSc
     }
   }
 
+  const sensorOffset = {
+    top: -50
+  };
+
+  if (isWide) {
+    sensorOffset.top = 0;
+  }
+
   return (
     <div
-      className = { `c-about-department-list__item__container ${isWide ? "-wide" : ""}` }>
+      className = { `c-about-department-list__item__container ${isWide ? "-wide" : ""}` }
+      id        = { id }>
       <VizSensor
-        partialVisiblity = { true }
-        onChange         = { handleVisibilityChange } >
+        partialVisiblity  = { true }
+        scrollDelay       = { 100 }
+        offset            = { sensorOffset }
+        onChange          = { handleVisibilityChange } >
         <div>
-          <Bounce bottom opposite = { isScrollDown } cascade when = { isIconsVisible }>
+          <Fade bottom opposite cascade when = { isIconsVisible }>
             {children}
-          </Bounce>
+          </Fade>
           <div className={`c-about-department-block ${isShort ? "-short " : ""} ${alignRight ? "-align-right" : ""} ${isWide ? "-wide" : ""}` }>
-            <Fade bottom opposite = { isScrollDown } cascade when = { isVisible }>
+            <Fade bottom opposite cascade when = { isVisible }>
               <h1>{name}</h1>
               <div className="c-about-department-block__container">
                 <div className="c-about-department-block__message">

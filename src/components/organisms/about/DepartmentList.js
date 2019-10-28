@@ -44,6 +44,7 @@ const DepartmentList = () => (
       <div className="c-about-department-list__item">
         <DepartmentBlock
             name    = { "Strategy" }
+            id      = { "about-strategy" }
             items   = { ["discovery and research", "data analysis", "content and marketing"] }
             content = { "“Why?” That’s what our Strategy team intends to find out, right from Discovery on through site and content development. We dig deep to get to the “Why?” behind your team’s stated problem. We don’t assume an answer. But we’re ready to use data and expertise to explore solutions." }
             isShort = { true }>
@@ -57,6 +58,7 @@ const DepartmentList = () => (
       <div className="c-about-department-list__item">
         <DepartmentBlock
             name       = { "Design" }
+            id         = { "about-design" }
             items      = { ["product design", "web design", "event design"] }
             content    = { "From revamping a website to creating the aesthetics for a massive live event from scratch, our design team is up to the challenge. We value pushing each other creatively with a passion that borders on relentless. The result: your brand hits new levels." }
             alignRight = { true }>
@@ -68,9 +70,10 @@ const DepartmentList = () => (
       </div>
       <div className="c-about-department-list__item">
         <DepartmentBlock
-            name    = {"Engineering"}
-            items   = {["app development", "software design", "client-side application"]}
-            content = {"Using Agile as our base, we work collaboratively with you to think beyond the obvious and deliver design thinking — it’s what has helped us come up with entirely new platforms out of thin air. You’re working with developers who live for this every day."}>
+            name    = { "Engineering" }
+            id      = { "about-engineering" }
+            items   = { ["app development", "software design", "client-side application"] }
+            content = { "Using Agile as our base, we work collaboratively with you to think beyond the obvious and deliver design thinking — it’s what has helped us come up with entirely new platforms out of thin air. You’re working with developers who live for this every day." }>
           <img src = {StickyNoteBrushSquares} srcSet={`${StickyNoteBrushSquares} 1x, ${StickyNoteBrushSquares2x} 2x`} className = "c-about-department-list__image -brush-squares" alt="" />
           <img src = {DabDots} srcSet={`${DabDots} 1x, ${DabDots2x} 2x`} className = "c-about-department-list__image -dab-dots" alt="" />
           <img src = {Asterisk} srcSet={`${Asterisk} 1x, ${Asterisk2x} 2x`} className = "c-about-department-list__image -asterisk" alt="" />
@@ -81,6 +84,7 @@ const DepartmentList = () => (
       <div className="c-about-department-list__item">
         <DepartmentBlock
             name    = { "Engagement" }
+            id      = { "about-engagement" }
             items   = { ["client advising", "project management", "business development"] }
             content = { "Organizing and understanding the nuances of a project can seem overwhelming. Our experienced engagement team works alongside you so you’re up to date as much as you want to be, from project updates to advising on your behalf in meetings so that your best interests are always represented in our designs." }
             isWide  = { true }>
