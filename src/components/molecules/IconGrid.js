@@ -18,6 +18,7 @@ const IconGrid = ({onHover}) => (
       <IconBlock name="empty" />
       <IconBlock name="empty" />
       <IconBlock name="empty" />
+      <p class="c-icon-grid__easteregg"><span>*</span>psst...new site coming soon</p>
     </IconGridColumn>
     <IconGridColumn>
       <IconBlock name="triangle" />
