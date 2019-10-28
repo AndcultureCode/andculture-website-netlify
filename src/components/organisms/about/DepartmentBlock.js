@@ -10,6 +10,7 @@ const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, 
   let iconTimer = null;
 
   const handleVisibilityChange = (isVisible) => {
+    return;
     setIsVisible(isVisible);
 
     if (iconTimer != null) {
@@ -50,11 +51,11 @@ const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, 
         offset            = { sensorOffset }
         onChange          = { handleVisibilityChange } >
         <div>
-          <Fade bottom opposite cascade when = { isIconsVisible }>
+          <Fade bottom opposite cascade>
             {children}
           </Fade>
           <div className={`c-about-department-block ${isShort ? "-short " : ""} ${alignRight ? "-align-right" : ""} ${isWide ? "-wide" : ""}` }>
-            <Fade bottom opposite cascade when = { isVisible }>
+            <Fade bottom opposite cascade>
               <h1>{name}</h1>
               <div className="c-about-department-block__container">
                 <div className="c-about-department-block__message">
