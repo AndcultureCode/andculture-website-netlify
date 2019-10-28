@@ -25,8 +25,6 @@ const DepartmentBlock = ({ children, name, items, content, isShort, isWide, isSc
     }
   }
 
-  console.log(isScrollDown);
-
   return (
     <div
       className = { `c-about-department-list__item__container ${isWide ? "-wide" : ""}` }>
