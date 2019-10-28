@@ -23,21 +23,22 @@ const HomeHeader = () => {
   const [ activeIcon,  setActiveIcon ]  = useState(null);
   const [ activeVideo, setActiveVideo ] = useState("default");
   const [ lastUpdate, setLastUpdate ] = useState(null);
+  const [ delayTimer, setDelayTimer ] = useState(null);
   const delay = 2000;
 
   const onHover = (eventType, type, delayed) => {
     const currentTime = new Date().getTime();
 
     if (lastUpdate > (currentTime - delay)) {
-      const ms = lastUpdate - (currentTime - delay);
-      setTimeout(() => onHover(eventType, type, true), ms);
-      setLastUpdate(currentTime + ms);
+      if (delayTimer != null) {
+        clearTimeout(delayTimer);
+      }
+      setDelayTimer(setTimeout(() => onHover(eventType, type, true), lastUpdate - (currentTime - delay)));
       return;
     }
 
-    if (!delayed) {
-      setLastUpdate(currentTime);
-    }
+    setLastUpdate(currentTime);
+    setDelayTimer(null);
 
     if (eventType === "mouseleave") {
       setActiveIcon(null);
