@@ -1,0 +1,3 @@
+# Redirect all traffic with temporary redirects
+
+/* / 302!

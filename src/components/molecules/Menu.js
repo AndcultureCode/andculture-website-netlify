@@ -44,7 +44,7 @@ const Menu = class extends React.Component {
           <SocialLinks />
           <div className="c-menu__overlay__header">
             <LogoMarkSVG cssClass="c-menu__logo" />
-            <a href      = "#" 
+            <a href      = "#"
               className = "c-menu__close"
               onClick   = {(e) => this._toggleMenu(e)}>
               <Icon name="x" />

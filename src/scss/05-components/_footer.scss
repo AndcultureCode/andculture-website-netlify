@@ -3,8 +3,15 @@
   padding-bottom: 48px;
   padding-top: 60px;
 
+  .c-easteregg {
+    display: none;
+    margin-top: -27px;
+    position: absolute;
+    left: calc(50% - 90px);
+  }
+
   p, a {
-    color: get-color-primary("after-hours");
+    color: get-color-neutral("darker");
     font-size: 12px;
     text-decoration: none;
   }
@@ -26,20 +33,23 @@
   }
 
   &__logo {
-    @include grid-column(3);
+    @include grid-column(10);
+    @include grid-push(1);
 
     @include respond-to("tablet") {
       @include grid-column(6);
+      text-align: center;
     }
 
     img {
-      height: 40px;
-      width: 144px;
+      height: 27px;
+      width: 111px;
     }
   }
 
   &__info {
-    @include grid-column(9);
+    @include grid-column(10);
+    @include grid-push(1);
     padding-top: 14px;
 
     @include respond-to("tablet") {
@@ -48,7 +58,12 @@
 
     &__details {
       display: inline-block;
-      width: 75%;
+      width: 50%;
+
+      @include respond-to("sm-desktop") {
+        width: auto;
+        margin-right: 20px;
+      }
 
       @include respond-to("tablet") {
         display: block;
@@ -68,12 +83,69 @@
       width: 25%;
       text-align: right;
 
+      @include respond-to("sm-desktop") {
+        width: auto;
+      }
+
       @include respond-to("tablet") {
         display: block;
         opacity: 0.5;
         width: 100%;
         text-align: left;
       }
+    }
+  }
+
+  &__social {
+    display: inline-block;
+    width: 25%;
+
+    @include respond-to("sm-desktop") {
+      width: auto;
+    }
+
+    &__link {
+      display: inline-block;
+      margin-right: 16px;
+      width: 18px;
+      vertical-align: bottom;
+
+      svg {
+        margin-bottom: 2px;
+        vertical-align: bottom;
+      }
+
+      @include respond-to("sm-desktop") {
+        margin-right: 10px;
+      }
+
+      @include respond-to("tablet") {
+        margin-bottom: 20px;
+      }
+
+      path, rect, circle {
+        fill: get-color-neutral("darker");
+      }
+
+      &:hover {
+        path, rect, circle {
+          fill: get-color-primary("fresh");
+        }
+      }
+    }
+  }
+
+  @include respond-to("sm-desktop") {
+    .c-easteregg {
+      display: block;
+    }
+  }
+
+  @include respond-to("tablet") {
+    padding-top: 110px;
+
+    .c-easteregg {
+      margin-top: -53px;
     }
   }
 }

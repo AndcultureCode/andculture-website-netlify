@@ -1,24 +1,99 @@
-import React        from 'react';
-import IconGrid     from '../../molecules/IconGrid';
-import HomeCollage  from '../../molecules/HomeCollage';
-import SquiggleLine from '../../atoms/SquiggleLine';
-import Menu         from '../../molecules/Menu';
-import LogoMarkSVG  from '../../atoms/LogoMarkSVG';
+import React, { useState }    from 'react';
+import IconGrid               from '../../molecules/IconGrid';
+import SquiggleLine           from '../../atoms/SquiggleLine';
+import HomeCollage            from '../../molecules/HomeCollage';
+import Menu                   from '../../molecules/Menu';
+import LogoMarkSVG            from '../../atoms/LogoMarkSVG';
+import { CSSTransitionGroup } from 'react-transition-group';
+import Fade                   from "react-reveal/Fade";
 
-const HomeHeader = () => (
-  <header className="c-home-header">
-    <LogoMarkSVG cssClass="c-home-header__logo" />
-    <HomeCollage />
-    <SquiggleLine />
-    <aside className="c-home-header__content">
-      <h1>a<span className="fade">ndculture</span><br />
-      design<br />
-      company</h1>
-      <label className="c-home-header__scroll">Take a stroll, then scroll</label>
-      <Menu />
-    </aside>
-    <IconGrid />
-  </header>
-);
+const MainHeaderText = ({headerText, subtleText}) => (
+  <div className = "header-text">
+    { headerText.map((text, key) => (<h1 key={key}>{text}</h1>)) }
+    {
+      subtleText != null &&
+        <label className="c-home-header__scroll header-text-subtle">{subtleText}</label>
+    }
+  </div>
+)
+
+const MainHeaderTextAnimate = ({isVisible, headerText, subtleText}) => (
+  <Fade bottom cascade when = { isVisible }>
+    <div className = "header-text">
+      { headerText.map((text, key) => (<h1 key={key}>{text}</h1>)) }
+      {
+        subtleText != null &&
+          <label className="c-home-header__scroll header-text-subtle">{subtleText}</label>
+      }
+    </div>
+  </Fade>
+)
+
+const HomeHeader = () => {
+  const [ activeIcon,  setActiveIcon ]  = useState(null);
+  const [ activeVideo, setActiveVideo ] = useState("default");
+  const [ lastUpdate, setLastUpdate ] = useState(null);
+  const [ delayTimer, setDelayTimer ] = useState(null);
+  const delay = 3000;
+
+  const onHover = (eventType, type, delayed) => {
+    const currentTime = new Date().getTime();
+
+    if (lastUpdate > (currentTime - delay) && eventType === "mouseleave") {
+      if (delayTimer != null) {
+        clearTimeout(delayTimer);
+      }
+      setDelayTimer(setTimeout(() => onHover(eventType, type, true), lastUpdate - (currentTime - delay)));
+      return;
+    }
+
+    setLastUpdate(currentTime);
+    if (delayTimer != null) {
+      clearTimeout(delayTimer);
+    }
+    setDelayTimer(null);
+
+    if (eventType === "mouseleave") {
+      setActiveIcon(null);
+      // setActiveVideo(`${type}Out`);
+      return;
+    }
+
+    setActiveIcon(type);
+    // setActiveVideo(type);
+  }
+
+  const handleOnHover = (e, type) => {
+    onHover(e.type, type, false);
+  }
+
+  return (
+    <header className="c-home-header">
+      <LogoMarkSVG className="c-home-header__logo" />
+      <HomeCollage activeVideo={activeVideo} />
+      {/* <SquiggleLine /> */}
+      <aside className="c-home-header__content -static">
+        <MainHeaderText
+          headerText = {[ <span>a<span className="fade">ndculture</span></span>, "design", "company" ]} />
+      </aside>
+      <aside className="c-home-header__content -animate">
+        <MainHeaderTextAnimate
+          isVisible = { activeIcon == null }
+          headerText = {[ <span>a<span className="fade">ndculture</span></span>, "design", "company" ]} />
+        <MainHeaderTextAnimate
+          isVisible = { activeIcon === "about" }
+          headerText = {[ "process can", "be a dirty word" ]} />
+        <MainHeaderTextAnimate
+          isVisible = { activeIcon === "contact" }
+          headerText = {[ "yes, we'd love", "to talk" ]} />
+        <MainHeaderTextAnimate
+          isVisible = { activeIcon === "work" }
+          headerText = {[ "how we make it", "look like magic" ]} />
+        {/* <Menu /> */}
+      </aside>
+      <IconGrid onHover={handleOnHover} />
+    </header>
+  );
+}
 
 export default HomeHeader;

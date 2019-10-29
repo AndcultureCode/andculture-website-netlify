@@ -8,9 +8,21 @@
     z-index: 97;
   }
 
+  .c-easteregg {
+    display: block;
+    position: absolute;
+    top: 802px;
+  }
+
   &__column {
     display: inline-block;
     vertical-align: top;
+
+    @include respond-to("sm-desktop") {
+      &:first-child {
+        display: none;
+      }
+    }
   }
 
   &__link,
@@ -56,7 +68,7 @@
       }
     }
 
-    &.team {
+    &.contact {
       .c-icon {
         color: get-color-primary("fresh");
         @include icon-shadow(rgba(44,165,125,0.4));
@@ -95,7 +107,7 @@
         color: get-color-secondary("violet-blue");
       }
 
-      .team & {
+      .contact & {
         color: get-color-primary("fresh");
       }
 

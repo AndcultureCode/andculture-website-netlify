@@ -1,0 +1,281 @@
+.c-about-department-list {
+  @include site-container;
+  margin-bottom: 120px;
+  overflow: hidden;
+
+  h2 {
+    margin-bottom: 82px;
+    font-weight: 300;
+    text-align: center;
+  }
+
+  &__intro {
+    @include grid-column(10);
+    @include grid-push(1);
+    margin-top: 50px;
+    margin-bottom: 150px;
+
+    @include respond-to("tablet") {
+      margin-top: 0;
+    }
+
+    @include respond-to("phone") {
+      margin-bottom: 100px;
+    }
+
+    &__header {
+      font-family: $font-normal;
+      line-height: 55px;
+      text-align: center;
+      position: relative;
+
+      h2 {
+        @include font-style(
+          $font-normal,                // Font Family
+          40px,                        // Font Size
+          get-color-neutral("darker"),  // Font Color
+          300,                         // Font Weight
+          55px                         // Line Height
+        );
+        letter-spacing: 2px;
+        margin-bottom: 140px;
+        padding: 0 10%;
+
+        @include respond-to("sm-laptop") {
+          margin-bottom: 80px;
+          paddding: 0;
+        }
+
+        @include respond-to("tablet") {
+          margin-bottom: 60px;
+        }
+       }
+    }
+
+    &__blocks {
+      width: 100%;
+
+      font-family: "DIN 2014";
+      position: relative;
+
+      &__content {
+        display: inline-block;
+        width: 45%;
+        vertical-align: top;
+
+        @include respond-to("tablet") {
+          width: 100%;
+
+          &:first-child {
+            margin-bottom: 40px;
+          }
+        }
+
+        &:first-child {
+          margin-right: 8%;
+        }
+
+        p {
+          @include font-style(
+            $font-normal,                // Font Family
+            21px,                        // Font Size
+            get-color-neutral("dark-text"), // Font Color
+            100,                         // Font Weight
+            30px                         // Line Height
+          );
+          letter-spacing: 1.2px;
+        }
+      }
+    }
+  }
+
+  &__item {
+    @include grid-column(10);
+    @include grid-push(1);
+    display:  flex;
+    position: relative;
+    margin-top: 200px;
+
+    &:nth-of-type(even) {
+      flex-direction: row-reverse;
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &__container {
+      &.-wide {
+        width: 100%;
+      }
+    }
+
+    &__animate {
+      @include respond-to("lg-laptop") {
+        display: none;
+      }
+    }
+
+    &__static {
+      display: none;
+
+      .c-about-department-list__image {
+        opacity: 0.1;
+      }
+
+      @include respond-to("lg-laptop") {
+        display: block;
+      }
+    }
+
+    @include respond-to("phone") {
+      margin-top: 30px;
+    }
+  }
+
+  &__image {
+    position: absolute;
+
+    &.-geometric-block {
+      height:   140px;
+      top:      232px;
+      right:    180px;
+      z-index:  5;
+    }
+
+    &.-swoosh {
+      height: 339px;
+      top: -104px;
+      right: 50px;
+      z-index: 4;
+    }
+
+    &.-x {
+      height: 111px;
+      top: 113px;
+      right: 86px;
+      z-index: 3;
+    }
+
+    &.-six-dots {
+      height: 86px;
+      top: 41px;
+      right: 87px;
+      z-index: 2;
+    }
+
+    &.-teal-dots {
+      height: 239px;
+      top: 59px;
+      right: 196px;
+      z-index: 1;
+    }
+
+    &.-go {
+      height: 112px;
+      top: 0;
+      left: 48px;
+      z-index: 5
+    }
+
+    &.-squiggle {
+      height: 330px;
+      top: 29px;
+      left: 0;
+      z-index: 4;
+    }
+
+    &.-align-lines {
+      height: 101px;
+      top: -16px;
+      left: 223px;
+      z-index: 3;
+    }
+
+    &.-doodle-dots {
+      height: 254px;
+      top: -125px;
+      right: -262px;
+      z-index: 2;
+
+      @include respond-to("phone") {
+        display: none;
+      }
+    }
+
+    &.-brush-squares {
+      height: 165px;
+      top: 90px;
+      right: -40px;
+      z-index: 5;
+    }
+
+    &.-dab-dots {
+      height: 104px;
+      top: 156px;
+      right: 108px;
+      z-index: 4;
+    }
+
+    &.-asterisk {
+      height: 126px;
+      top: 43px;
+      right: 167px;
+      z-index: 2;
+    }
+
+    &.-red-blob {
+      height: 174px;
+      top: 175px;
+      right: 153px;
+      z-index: 3;
+    }
+
+    &.-bendy-lines {
+      height: 759px;
+      top: -356px;
+      right: -116px;
+      z-index: 1;
+    }
+
+    &.-plant {
+      height: 128px;
+      top: 30px;
+      left: 234px;
+      z-index: 5;
+
+      @include respond-to("phone") {
+        top: 130px;
+      }
+    }
+
+    &.-triangle {
+      height: 200px;
+      top: -58px;
+      left: 106px;
+      z-index: 4;
+
+      @include respond-to("phone") {
+        top: 28px;
+      }
+    }
+
+    &.-rainbow {
+      height: 226px;
+      top: 10px;
+      left: -30px;
+      z-index: 3;
+
+      @include respond-to("phone") {
+        top: 110px;
+      }
+    }
+  }
+}
+
+.c-home-header + .c-about-department-list {
+  margin-top: 100px;
+
+  @include respond-to("sm-laptop") {
+    margin-top: 60px;
+  }
+}

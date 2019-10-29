@@ -3,15 +3,20 @@ import PropTypes  from 'prop-types';
 import LinkButton from '../atoms/LinkButton';
 
 const Talk = ({ message }) => (
-  <div className="c-talk">
+  <div className="c-talk" id="contact">
     <div className="c-talk__wrapper">
       <p className="c-talk__wrapper__content">
         { message }
       </p>
       <div className="c-talk__wrapper__action">
-        <LinkButton
+        {/* <LinkButton
           text = "Let's Talk"
-          url  = "/contact" />
+          url  = "/contact" /> */}
+        <a
+          className = "c-link-button"
+          href      = "mailto:hello@andculture.com">
+            Let's Talk
+        </a>
       </div>
     </div>
   </div>

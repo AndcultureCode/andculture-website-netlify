@@ -152,7 +152,7 @@
         &__nav {
           ul {
             @include clearlist;
-  
+
             li {
               @include clearlist;
             }
@@ -179,7 +179,7 @@
   &__locations {
     @include clearfix();
     display: block;
-    padding-top: 182px;
+    // padding-top: 182px;
 
     @include respond-to("phone") {
       display: none;

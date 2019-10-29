@@ -26,6 +26,7 @@
 .c-home-collage {
   position: absolute;
   z-index: 0;
+  left: -382px;
 
   &__longbrush {
     height: 659px;
@@ -164,5 +165,28 @@
     top: 615px;
     z-index: 2;
     @include animation(fade-in 5s alternate ease-out forwards);
+  }
+
+  &__image {
+    display: none;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+
+    @include respond-to("phone") {
+      opacity: 0.4;
+    }
+  }
+
+  &__video {
+
+    &.-preload {
+      display: none;
+    }
+
+    @include respond-to("tablet") {
+      display: none;
+    }
   }
 }

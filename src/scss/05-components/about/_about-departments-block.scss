@@ -1,0 +1,74 @@
+.c-about-department-block {
+  width: 600px;
+  padding-top: 175px;
+  padding-left: 174px;
+  position: relative;
+  clear: both;
+  z-index: 6;
+
+  @include respond-to("tablet") {
+    padding-left: 0;
+    width: 100%;
+  }
+
+  &.-short {
+    padding-top: 122px;
+  }
+  &.-wide {
+    margin-top: 100px;
+    padding-left: 0;
+    padding-right: 230px;
+    width: 100%;
+    .c-about-department-block__container {
+      float: right;
+    }
+    h1 {
+      left: 100px;
+    }
+  }
+  &.-align-right {
+    padding-left: 0;
+    padding-right: 230px;
+    > h1 {
+      right: 25%;
+      left: auto;
+    }
+
+    @include respond-to("tablet") {
+      padding-right: 0;
+
+      > h1 {
+        right: auto;
+      }
+    }
+  }
+
+  > h1 {
+    @include font-style($font-narrow, 88px, #DEEAEC, 800, 88px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 286px;
+    z-index: -1;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    overflow-wrap: break-word;
+
+    @include respond-to("phone") {
+      color: get-color-complimentary("tea");
+      position: static;
+    }
+  }
+  &__message {
+    margin-bottom: 32px;
+    max-width: 332px;
+    > p {
+      @include font-style($font-normal, 16px, #083744, 200, 24px);
+    }
+  }
+  &__list {
+    @include font-style($font-normal, 16px, #083744, 200, 24px);
+    margin-left: 22px;
+    text-transform: lowercase;
+  }
+}
