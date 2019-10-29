@@ -6,7 +6,10 @@ const EasterEgg = () => {
   const [ snapTimer, setSnapTimer ] = useState(null);
 
   if (snapTimer == null) {
-    setSnapTimer(setInterval(() => setSnapEasterEgg(snapEasterEgg + 1), 5000));
+    setSnapTimer(setTimeout(() => {
+      setSnapEasterEgg(snapEasterEgg + 1);
+      setSnapTimer(null);
+    }, Math.floor(Math.random() * (20000 + 1)) + 10000));
   }
 
   return (

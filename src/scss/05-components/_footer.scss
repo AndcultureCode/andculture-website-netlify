@@ -38,6 +38,7 @@
 
     @include respond-to("tablet") {
       @include grid-column(6);
+      text-align: center;
     }
 
     img {
@@ -141,10 +142,10 @@
   }
 
   @include respond-to("tablet") {
-    padding-top: 90px;
+    padding-top: 110px;
 
     .c-easteregg {
-      margin-top: -41px;
+      margin-top: -53px;
     }
   }
 }
