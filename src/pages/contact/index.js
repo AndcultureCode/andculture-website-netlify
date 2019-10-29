@@ -1,5 +1,5 @@
 import React from 'react'
-import { navigate } from 'gatsby-link'
+import { navigate } from 'gatsby';
 import Layout from '../../components/Layout'
 
 function encode(data) {
@@ -33,7 +33,12 @@ export default class Index extends React.Component {
       .catch(error => alert(error))
   }
 
+  componentDidMount() {
+    navigate("/");
+  }
+
   render() {
+    return null;
     return (
       <Layout>
         <section className="section">

@@ -1,10 +1,17 @@
 import React from 'react'
+import { navigate } from 'gatsby';
 
 import Layout from '../../components/Layout'
 import BlogRoll from '../../components/BlogRoll'
 
 export default class BlogIndexPage extends React.Component {
+
+  componentDidMount() {
+    navigate("/");
+  }
+
   render() {
+    return null;
     return (
       <Layout>
         <div
