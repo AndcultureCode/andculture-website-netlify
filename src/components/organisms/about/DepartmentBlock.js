@@ -16,7 +16,7 @@ const DepartmentBlock = class DepartmentBlock extends React.Component {
 
     this.state = {
       isIconsVisible: false,
-      isMoble:        window != null ? window.innerWidth < this._mobileBreakpoint : false,
+      isMoble:        false,
       isVisible:      false,
       iconTimer:      null,
     };
@@ -30,6 +30,7 @@ const DepartmentBlock = class DepartmentBlock extends React.Component {
   // --------------------------------------
 
   componentDidMount(){
+    this._handleWindowResize();
     document.addEventListener("resize", this._handleWindowResize);
   }
 
