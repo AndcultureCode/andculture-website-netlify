@@ -32,6 +32,10 @@
     position: relative;
     z-index: 1;
 
+    &.-static {
+      display: none;
+    }
+
     > .c-menu {
       display: none;
       position: absolute;
@@ -44,11 +48,6 @@
       }
     }
 
-    @include respond-to("lg-laptop") {
-      @include grid-column(8);
-      @include grid-push(4);
-    }
-
     .header-text {
       position: absolute;
 
@@ -58,25 +57,25 @@
         margin-top: 0;
         margin-bottom: 0;
 
-        &-enter {
-          opacity: 0.01;
-          padding-top: 90px;
-        }
+        // &-enter {
+        //   opacity: 0.01;
+        //   padding-top: 90px;
+        // }
 
-        &-enter-active {
-          padding-top: 0;
-          opacity: 1;
-          transition: padding-top 300ms ease-in, opacity 300ms ease-out;
-        }
+        // &-enter-active {
+        //   padding-top: 0;
+        //   opacity: 1;
+        //   transition: padding-top 300ms ease-in, opacity 300ms ease-out;
+        // }
 
-        &-leave {
-          opacity: 1;
-        }
+        // &-leave {
+        //   opacity: 1;
+        // }
 
-        &-leave-active {
-          opacity: 0.01;
-          transition: opacity 200ms ease-out;
-        }
+        // &-leave-active {
+        //   opacity: 0.01;
+        //   transition: opacity 200ms ease-out;
+        // }
       }
 
       &-subtle {
@@ -84,23 +83,48 @@
         height: 38px;
         margin-top: 124px;;
 
-        &-enter {
-          opacity: 0.01;
-        }
+        // &-enter {
+        //   opacity: 0.01;
+        // }
 
-        &-enter-active {
-          opacity: 1;
-          transition: opacity 1000ms ease-out;
-        }
+        // &-enter-active {
+        //   opacity: 1;
+        //   transition: opacity 1000ms ease-out;
+        // }
 
-        &-leave {
-          opacity: 1;
-        }
+        // &-leave {
+        //   opacity: 1;
+        // }
 
-        &-leave-active {
-          opacity: 0.01;
-          transition: opacity 200ms ease-out;
-        }
+        // &-leave-active {
+        //   opacity: 0.01;
+        //   transition: opacity 200ms ease-out;
+        // }
+      }
+    }
+
+    @include respond-to("lg-laptop") {
+      @include grid-column(8);
+      @include grid-push(4);
+
+      &.-static {
+        display: block;
+      }
+
+      &.-animate {
+        display: none;
+      }
+    }
+
+    @include respond-to("sm-tablet") {
+      max-width: 100%;
+      width: auto;
+      float: right;
+      margin-left: 0;
+      margin-right: 30px;
+
+      .header-text {
+        position: static;
       }
     }
   }

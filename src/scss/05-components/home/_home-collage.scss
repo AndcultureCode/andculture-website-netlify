@@ -173,6 +173,10 @@
     @include respond-to("tablet") {
       display: block;
     }
+
+    @include respond-to("phone") {
+      opacity: 0.4;
+    }
   }
 
   &__video {

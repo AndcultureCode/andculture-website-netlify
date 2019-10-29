@@ -1,6 +1,7 @@
 .c-about-department-list {
   @include site-container;
   margin-bottom: 120px;
+  overflow-x: hidden;
 
   h2 {
     margin-bottom: 82px;
