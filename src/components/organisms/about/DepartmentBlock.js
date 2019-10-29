@@ -16,7 +16,7 @@ const DepartmentBlock = class DepartmentBlock extends React.Component {
 
     this.state = {
       isIconsVisible: false,
-      isMoble:        window.innerWidth < this._mobileBreakpoint,
+      isMoble:        window != null ? window.innerWidth < this._mobileBreakpoint : false,
       isVisible:      false,
       iconTimer:      null,
     };
@@ -118,6 +118,9 @@ const DepartmentBlock = class DepartmentBlock extends React.Component {
   }
 
   _handleWindowResize() {
+    if (window == null) {
+      return;
+    }
     if (this.state.isMoble !== window.innerWidth < this._mobileBreakpoint) {
       this.setState({
         isMoble: window.innerWidth < this._mobileBreakpoint,
