@@ -18,8 +18,6 @@ import Squiggle                 from "../../../img/about-blue_squiggle.png";
 import Squiggle2x               from "../../../img/about-blue_squiggle@2x.png";
 import AlignLines               from "../../../img/about-align_lines.png";
 import AlignLines2x             from "../../../img/about-align_lines@2x.png";
-import DoodleDots               from "../../../img/about-doodle_dots.png";
-import DoodleDots2x             from "../../../img/about-doodle_dots@2x.png";
 import DabDots                  from "../../../img/about-dab_dots.png";
 import DabDots2x                from "../../../img/about-dab_dots@2x.png";
 import Asterisk                 from "../../../img/about-yellow_asterisk.png";
@@ -65,7 +63,6 @@ const DepartmentList = () => (
           <img src = {Go} srcSet={`${Go} 1x, ${Go2x} 2x`} className = "c-about-department-list__image -go" alt="" />
           <img src = {Squiggle} srcSet={`${Squiggle} 1x, ${Squiggle2x} 2x`} className = "c-about-department-list__image -squiggle" alt="" />
           <img src = {AlignLines} srcSet={`${AlignLines} 1x, ${AlignLines2x} 2x`} className = "c-about-department-list__image -align-lines" alt="" />
-          <img src = {DoodleDots} srcSet={`${DoodleDots} 1x, ${DoodleDots2x} 2x`} className = "c-about-department-list__image -doodle-dots" alt="" />
         </DepartmentBlock>
       </div>
       <div className="c-about-department-list__item">
