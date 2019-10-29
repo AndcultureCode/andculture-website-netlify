@@ -1,5 +1,7 @@
 import React                          from 'react';
 import Paragraph                      from '../atoms/Paragraph';
+import ArmstrongLogo                  from '../../img/clients/client_armstrong.png';
+import ArmstrongLogo2x                from '../../img/clients/client_armstrong@2x.png';
 import AdaptivePathLogo               from '../../img/clients/client_adaptivpath.png';
 import AdaptivePathLogo2x             from '../../img/clients/client_adaptivpath@2x.png';
 import BenjaminMooreLogo              from '../../img/clients/client_benmoore.png';
@@ -34,9 +36,9 @@ const OurFriends = () => (
     <div className="c-our-friends__wrapper">
       <Paragraph cssClassName="c-our-friends__wrapper__label">Some of our friends</Paragraph>
       <div className="c-our-friends__wrapper__logos-container">
-        {/* <div className={logoDivClass}>
-          <img src={AdaptivePathLogo} srcSet={`${AdaptivePathLogo} 1x, ${AdaptivePathLogo2x} 2x`} alt="Adaptive Path"/>
-        </div> */}
+        <div className={logoDivClass}>
+          <img src={ArmstrongLogo} srcSet={`${ArmstrongLogo} 1x, ${ArmstrongLogo2x} 2x`} alt="Armstrong"/>
+        </div>
         <div className={logoDivClass}>
           <img src={BenjaminMooreLogo} srcSet={`${BenjaminMooreLogo} 1x, ${BenjaminMooreLogo2x} 2x`} alt="Benjamin Moore"/>
         </div>
