@@ -53,6 +53,11 @@
     letter-spacing: 0.25em;
     text-transform: uppercase;
     overflow-wrap: break-word;
+
+    @include respond-to("phone") {
+      color: get-color-complimentary("tea");
+      position: static;
+    }
   }
   &__message {
     margin-bottom: 32px;

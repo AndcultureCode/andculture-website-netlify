@@ -3,6 +3,13 @@
   padding-bottom: 48px;
   padding-top: 60px;
 
+  .c-easteregg {
+    display: none;
+    margin-top: -27px;
+    position: absolute;
+    left: calc(50% - 90px);
+  }
+
   p, a {
     color: get-color-neutral("darker");
     font-size: 12px;
@@ -124,6 +131,20 @@
           fill: get-color-primary("fresh");
         }
       }
+    }
+  }
+
+  @include respond-to("sm-desktop") {
+    .c-easteregg {
+      display: block;
+    }
+  }
+
+  @include respond-to("tablet") {
+    padding-top: 90px;
+
+    .c-easteregg {
+      margin-top: -41px;
     }
   }
 }

@@ -1,5 +1,6 @@
 import React        from 'react'
 import Logo         from "../../img/wordmark.svg"
+import EasterEgg    from '../atoms/EasterEgg';
 import { Link }     from 'gatsby';
 import MobileBreak  from '../atoms/MobileBreak';
 import SocialIcon   from '../atoms/SocialIcon';
@@ -10,6 +11,7 @@ const FooterDivider = () => (
 
 const Footer = () => (
   <footer className="c-footer">
+    <EasterEgg />
     <div className="c-footer__logo">
       <Link to="/">
         <img src={Logo} alt="andculture" />
