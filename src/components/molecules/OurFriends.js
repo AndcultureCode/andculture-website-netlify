@@ -64,7 +64,7 @@ const OurFriends = () => (
           <img src={CaptricityLogo} srcSet={`${CaptricityLogo} 1x, ${CaptricityLogo2x} 2x`} alt="Captricity"/>
         </div>
         <div className={logoDivClass}>
-          <img src={HackerOneLogo} srcSet={`${HackerOneLogo} 1x, ${HackerOneLogo2x} 2x`} alt="Captricity"/>
+          <img src={HackerOneLogo} srcSet={`${HackerOneLogo} 1x, ${HackerOneLogo2x} 2x`} alt="Hacker One"/>
         </div>
         {/* <div className={logoDivClass}>
           <img src={SheetzLogo} srcSet={`${SheetzLogo} 1x, ${SheetzLogo2x} 2x`} alt="Sheetz"/>

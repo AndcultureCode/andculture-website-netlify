@@ -12,8 +12,7 @@ const HomeSubHeader = () => {
     <div className="c-about-department-list__intro">
       <div className="c-about-department-list__intro__header">
         <h2>
-          We pursue forward-thinking partners<br/>
-          who need someone to design a solution.
+          We pursue forward-thinking partners who need someone to design a solution.
         </h2>
       </div>
       <div className="c-about-department-list__intro__blocks">
