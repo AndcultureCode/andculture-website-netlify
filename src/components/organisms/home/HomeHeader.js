@@ -19,9 +19,13 @@ const MainHeaderText = ({headerText, subtleText}) => (
 
 const MainHeaderTextAnimate = ({isVisible, headerText, subtleText}) => (
   <Fade bottom cascade when = { isVisible }>
-    <MainHeaderText
-      headerText = { headerText }
-      subtleText = { subtleText } />
+    <div className = "header-text">
+      { headerText.map((text, key) => (<h1 key={key}>{text}</h1>)) }
+      {
+        subtleText != null &&
+          <label className="c-home-header__scroll header-text-subtle">{subtleText}</label>
+      }
+    </div>
   </Fade>
 )
 
