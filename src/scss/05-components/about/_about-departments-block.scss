@@ -14,11 +14,13 @@
   &.-short {
     padding-top: 122px;
   }
+
   &.-wide {
     margin-top: 100px;
     padding-left: 0;
     padding-right: 230px;
     width: 100%;
+
     .c-about-department-block__container {
       float: right;
     }
@@ -26,12 +28,14 @@
       left: 100px;
     }
   }
+
   &.-align-right {
     padding-left: 0;
-    padding-right: 230px;
+
     > h1 {
       right: 25%;
       left: auto;
+      top: 40px;
     }
 
     @include respond-to("tablet") {
@@ -59,13 +63,20 @@
       position: static;
     }
   }
+
+  &__container {
+    float: right;
+  }
+
   &__message {
     margin-bottom: 32px;
     max-width: 332px;
+
     > p {
       @include font-style($font-normal, 16px, #083744, 200, 24px);
     }
   }
+
   &__list {
     @include font-style($font-normal, 16px, #083744, 200, 24px);
     margin-left: 22px;
