@@ -101,25 +101,28 @@
         width: 100%;
       }
     }
+
+    &__animate {
+      @include respond-to("lg-laptop") {
+        display: none;
+      }
+    }
+
+    &__static {
+      display: none;
+
+      .c-about-department-list__image {
+        opacity: 0.1;
+      }
+
+      @include respond-to("lg-laptop") {
+        display: block;
+      }
+    }
   }
 
   &__image {
     position: absolute;
-
-    &__static {
-      opacity: 0.1;
-      visibility: hidden;
-    }
-
-    @include respond-to("lg-laptop") {
-      &__animate {
-        visibility: hidden;
-      }
-
-      &__static {
-        visibility: visible;
-      }
-    }
 
     &.-geometric-block {
       height:   140px;
