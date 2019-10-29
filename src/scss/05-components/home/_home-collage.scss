@@ -167,9 +167,21 @@
     @include animation(fade-in 5s alternate ease-out forwards);
   }
 
+  &__image {
+    display: none;
+
+    @include respond-to("tablet") {
+      display: block;
+    }
+  }
+
   &__video {
 
     &.-preload {
+      display: none;
+    }
+
+    @include respond-to("tablet") {
       display: none;
     }
   }

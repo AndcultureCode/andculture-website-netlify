@@ -15,6 +15,7 @@ import TriangleImage          from "../../img/home-collage_triangle@2x.png";
 import VioletAngleBrushImage  from "../../img/home-collage_violet_anglebrush@2x.png";
 import VioletLines            from "../../img/home-collage_violet_lines@2x.png";
 import BackgroundVideo        from "../atoms/BackgroundVideo";
+import HomepageStatic         from "../../img/homepageStatic.png";
 
 const HomeCollage = ({ activeVideo }) => (
   <div className="c-home-collage">
@@ -27,6 +28,7 @@ const HomeCollage = ({ activeVideo }) => (
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "contactOut"} url="/video/contactOut.mp4" />
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "work"} url="/video/work.mp4" />
     <BackgroundVideo className="c-home-collage__video" playing={activeVideo === "workOut"} url="/video/workOut.mp4" />
+    <img src={HomepageStatic} className = "c-home-collage__image" alt="Home Collage" />
     {/* <img src={LongBrushImage} alt="Yellow Long Brush Stroke" className="c-home-collage__longbrush" />
     <img src={AngleBrushImage} alt="Angle Brush Stroke" className="c-home-collage__anglebrush" />
     <img src={DropsImage} alt="Drops" className="c-home-collage__drops" />

@@ -4,22 +4,97 @@ import Fade                 from "react-reveal/Fade";
 import VizSensor            from 'react-visibility-sensor';
 import { scroller }         from "react-scroll";
 
-const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, alignRight }) => {
-  const [ isVisible, setIsVisible ] = useState(false);
-  const [ isIconsVisible, setIsIconsVisible ] = useState(false);
-  let iconTimer = null;
+const DepartmentBlock = class DepartmentBlock extends React.Component {
 
-  const handleVisibilityChange = (isVisible) => {
+  _mobileBreakpoint = 940;
+
+  // Constructor
+  // --------------------------------------
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isIconsVisible: false,
+      isMoble:        window.innerWidth < this._mobileBreakpoint,
+      isVisible:      false,
+      iconTimer:      null,
+    };
+
+    this._handleVisibilityChange = this._handleVisibilityChange.bind(this);
+    this._handleWindowResize     = this._handleWindowResize.bind(this);
+  }
+
+
+  // Lifecycle Methods
+  // --------------------------------------
+
+  componentDidMount(){
+    document.addEventListener("resize", this._handleWindowResize);
+  }
+
+  componentWillUnmount(){
+    document.removeEventListener("resize", this._handleWindowResize);
+  }
+
+  render() {
+    return (
+      <div
+        className = { `c-about-department-list__item__container ${this.props.isWide ? "-wide" : ""}` }
+        id        = { this.props.id }>
+        <VizSensor
+          partialVisiblity  = { true }
+          onChange          = { this.handleVisibilityChange } >
+          <div>
+            <div className="c-about-department-list__image__animate">
+              <Fade bottom opposite cascade when = { this.state.isIconsVisible } disabled = { this.state.isMoble }>
+                {this.props.children}
+              </Fade>
+            </div>
+            <div className="c-about-department-list__image__static">
+              {this.props.children}
+            </div>
+            <div className={`c-about-department-block ${this.props.isShort ? "-short " : ""} ${this.props.alignRight ? "-align-right" : ""} ${this.props.isWide ? "-wide" : ""}` }>
+              <Fade bottom opposite cascade when = { this.state.isVisible } disabled = { this.state.isMoble }>
+                <h1>{ this.props.name.map((text, key) => (<span key={ key }>{text}<br /></span>)) }</h1>
+                <div className="c-about-department-block__container">
+                  <div className="c-about-department-block__message">
+                    <p>
+                      {this.props.content}
+                    </p>
+                  </div>
+                  <div className="c-about-department-block__list">
+                    <ul>
+                      {this.props.items.map((item, idx) => {
+                        return <li key={idx}>{item}</li>
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </Fade>
+            </div>
+          </div>
+        </VizSensor>
+      </div>
+    );
+  }
+
+  // Private Methods
+  // --------------------------------------
+
+  _handleVisibilityChange(isVisible) {
     if (!isVisible) {
       return;
     }
-    setIsVisible(isVisible);
 
-    if (iconTimer != null) {
-      clearTimeout(iconTimer);
+    if (this.state.iconTimer != null) {
+      clearTimeout(this.state.iconTimer);
     }
     if (!isVisible) {
-      setIsIconsVisible(isVisible);
+      this.setState({
+        isVisible:      isVisible,
+        isIconsVisible: isVisible,
+      });
     }
     else {
       // scroller.scrollTo(id, {
@@ -28,52 +103,27 @@ const DepartmentBlock = ({ children, name, id, items, content, isShort, isWide, 
       //   offset: -200,
       // });
 
-      iconTimer = setTimeout(() => {
-        setIsIconsVisible(isVisible);
-        iconTimer = null;
+      const iconTimer = setTimeout(() => {
+        this.setState({
+          isIconsVisible: isVisible,
+          iconTimer:      null,
+        });
       }, 500);
+
+      this.setState({
+        isVisible: isVisible,
+        iconTimer: iconTimer,
+      });
     }
   }
 
-  return (
-    <div
-      className = { `c-about-department-list__item__container ${isWide ? "-wide" : ""}` }
-      id        = { id }>
-      <VizSensor
-        partialVisiblity  = { true }
-        onChange          = { handleVisibilityChange } >
-        <div>
-          <div className="c-about-department-list__image__animate">
-            <Fade bottom opposite cascade when = { isIconsVisible }>
-              {children}
-            </Fade>
-          </div>
-          <div className="c-about-department-list__image__static">
-            {children}
-          </div>
-          <div className={`c-about-department-block ${isShort ? "-short " : ""} ${alignRight ? "-align-right" : ""} ${isWide ? "-wide" : ""}` }>
-            <Fade bottom opposite cascade when = { isVisible }>
-              <h1>{ name.map((text, key) => (<span key={ key }>{text}<br /></span>)) }</h1>
-              <div className="c-about-department-block__container">
-                <div className="c-about-department-block__message">
-                  <p>
-                    {content}
-                  </p>
-                </div>
-                <div className="c-about-department-block__list">
-                  <ul>
-                    {items.map((item, idx) => {
-                      return <li key={idx}>{item}</li>
-                    })}
-                  </ul>
-                </div>
-              </div>
-            </Fade>
-          </div>
-        </div>
-      </VizSensor>
-    </div>
-  );
+  _handleWindowResize() {
+    if (this.state.isMoble !== window.innerWidth < this._mobileBreakpoint) {
+      this.setState({
+        isMoble: window.innerWidth < this._mobileBreakpoint,
+      });
+    }
+  }
 }
 
 export default DepartmentBlock;

@@ -5,6 +5,12 @@
   position: relative;
   clear: both;
   z-index: 6;
+
+  @include respond-to("tablet") {
+    padding-left: 0;
+    width: 100%;
+  }
+
   &.-short {
     padding-top: 122px;
   }
@@ -28,6 +34,9 @@
       left: auto;
     }
 
+    @include respond-to("tablet") {
+      padding-right: 0;
+    }
   }
 
   > h1 {
