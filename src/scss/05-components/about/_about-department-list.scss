@@ -127,6 +127,13 @@
       }
     }
 
+    &.-right {
+
+      .c-about-department-block__container {
+        float: right;
+      }
+    }
+
     @include respond-to("phone") {
       margin-top: 30px;
     }

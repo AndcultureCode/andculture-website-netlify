@@ -53,7 +53,7 @@ const DepartmentList = () => (
           <img src = {TealDots} srcSet={`${TealDots} 1x, ${TealDots2x} 2x`} className = "c-about-department-list__image -teal-dots" alt="" />
         </DepartmentBlock>
       </div>
-      <div className="c-about-department-list__item">
+      <div className="c-about-department-list__item -right">
         <DepartmentBlock
             name       = { ["Desi", "gn"] }
             id         = { "about-design" }
