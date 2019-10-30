@@ -38,8 +38,8 @@
           55px                         // Line Height
         );
         letter-spacing: 2px;
-        margin-bottom: 140px;
-        padding: 0 10%;
+        margin-bottom: 56px;
+        padding: 0;
 
         @include respond-to("sm-laptop") {
           margin-bottom: 80px;
@@ -49,12 +49,12 @@
         @include respond-to("tablet") {
           margin-bottom: 60px;
         }
-       }
+      }
     }
 
     &__blocks {
+      margin-bottom: 56px;
       width: 100%;
-
       font-family: "DIN 2014";
       position: relative;
 
@@ -124,6 +124,24 @@
 
       @include respond-to("lg-laptop") {
         display: block;
+      }
+    }
+
+    &.-pull-title-right {
+
+      .c-about-department-block > h1 {
+        right: 6%;
+      }
+    }
+
+    &.-right {
+
+      .c-about-department-block__container {
+        float: right;
+      }
+
+      .c-about-department-block.-align-right {
+        padding-right: 0;
       }
     }
 
