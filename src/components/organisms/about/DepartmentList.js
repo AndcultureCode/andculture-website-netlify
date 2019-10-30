@@ -78,7 +78,7 @@ const DepartmentList = () => (
           <img src = {BendyLines} srcSet={`${BendyLines} 1x, ${BendyLines2x} 2x`} className = "c-about-department-list__image -bendy-lines" alt="" />
         </DepartmentBlock>
       </div>
-      <div className="c-about-department-list__item">
+      <div className="c-about-department-list__item -pull-title-right">
         <DepartmentBlock
             name       = { ["Eng", "age", "ment"] }
             id         = { "about-engagement" }
