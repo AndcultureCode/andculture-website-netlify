@@ -81,11 +81,6 @@ module.exports = {
         },
         tagmanager: {
           id: 'GTM-WDSLFDH',
-          params: {
-            // GTM URL Parameters
-            // Ex: https://www.googletagmanager.com/gtm.js?id=[ID]&gtm_cookies_win=x
-            gtm_cookies_win: 'x'
-          }
         },
         analytics: {
           id: 'UA-168399-15',
