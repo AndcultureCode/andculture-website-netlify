@@ -69,7 +69,7 @@ const DepartmentList = () => (
         <DepartmentBlock
             name    = { ["Engi", "neer", "ing"] }
             id      = { "about-engineering" }
-            items   = { ["app development", "software design", "client-side application"] }
+            items   = { ["app development", "software design", "client-side applications"] }
             content = { "Using Agile as our base, we work collaboratively with you to think beyond the obvious and deliver design thinking — it’s what has helped us come up with entirely new platforms out of thin air. You’re working with developers who live for this every day." }>
           <img src = {StickyNoteBrushSquares} srcSet={`${StickyNoteBrushSquares} 1x, ${StickyNoteBrushSquares2x} 2x`} className = "c-about-department-list__image -brush-squares" alt="" />
           <img src = {DabDots} srcSet={`${DabDots} 1x, ${DabDots2x} 2x`} className = "c-about-department-list__image -dab-dots" alt="" />

@@ -72,6 +72,25 @@ module.exports = {
         modulePath: `${__dirname}/src/cms/cms.js`,
       },
     },
+    {
+      resolve: 'gatsby-plugin-google-marketing-platform',
+      options: {
+        dataLayer: {
+          // Preset dataLayer values
+          gaPropertyId: 'UA-168399-15',
+        },
+        tagmanager: {
+          id: 'GTM-WDSLFDH',
+        },
+        analytics: {
+          id: 'UA-168399-15',
+        },
+        optimize: {
+          id: 'GTM-TKCB55L',
+        },
+        includeInDevelopment: true,
+      },
+    },
     'gatsby-plugin-netlify', // make sure to keep it last in the array
   ],
   // for avoiding CORS while developing Netlify Functions locally
